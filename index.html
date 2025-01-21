@@ -32,32 +32,32 @@
     <div id="aprendizagem" class="section">
         <h1>Aprendizagem</h1>
         <div class="grid">
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Card Image">
-                <h3>Periféricos</h3>
+            <div class="card" onclick="openModal('componentes')">
+                <img src="img/perifericos.png" alt="Componentes">
+                <h3>Componentes</h3>
                 <p>Peças do computador</p>
             </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Card Image">
+            <div class="card" onclick="openModal('computador')">
+                <img src="https://via.placeholder.com/150" alt="Computador">
                 <h3>Explore</h3>
                 <p>Graphic Design</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="openModal('perifericos', 'Periféricos', 'Peças do computador')">
                 <img src="https://via.placeholder.com/150" alt="Card Image">
                 <h3>Finish</h3>
                 <p>Identity</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="openModal('perifericos', 'Periféricos', 'Peças do computador')">
                 <img src="https://via.placeholder.com/150" alt="Card Image">
                 <h3>Lines</h3>
                 <p>Branding</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="openModal('perifericos', 'Periféricos', 'Peças do computador')">
                 <img src="https://via.placeholder.com/150" alt="Card Image">
                 <h3>Southwest</h3>
                 <p>Website Design</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="openModal('perifericos', 'Periféricos', 'Peças do computador')">
                 <img src="https://via.placeholder.com/150" alt="Card Image">
                 <h3>Window</h3>
                 <p>Photography</p>
@@ -75,10 +75,162 @@
         <p>Conheça nossa equipe.</p>
     </div>
 
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Modal Image">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <!-- Conteúdo do Modal -->
+    <div id="modalContent-componentes" style="display: none;">
+        <h1>Componentes</h1>
+        <div class="modal-image-container">
+            <img src="img/perifericos.png" alt="componentes" id="modalImage">
+        </div>
+        <div class="modal-text">
+           
+            <h2>O que são os componentes de um computador?</h2>
+            <ul><br><br>
+                <li>Os componentes de um computador são as peças de uma máquina.</li>
+                <br><li>Eles trabalham juntos para que o computador funcione e faça o desejado.</li>
+                <br><li>É como uma equipa onde cada jogador tem uma função importante!</li>
+            </ul>
+            <br><br><br>
+            <h2>Quais são os componentes de um computador?</h2>
+            <ul><br><br>
+                <li>Placa-Mãe (Motherboard)</li>
+                <br><li>Processador (CPU)</li>
+                <br><li>Memória RAM</li>
+                <br><li>Armazenamento (HD ou SSD)</li>
+                <br><li>Placa Gráfica (GPU)(Não é obrigatório)</li>
+                <br><li>Fonte de Alimentação</li>
+                <br><li>Coolers (ventoinhas)</li>
+                <br><li>Caixa</li>
+            </ul>
+            <br><br><br>
+            <h2>O que faz cada componente?</h2>
+            <div class="content-with-image">
+                <div class="text-content">
+                    <h3>Placa-Mãe</h3>
+                    <ul>
+                        <br><li>É como uma cidade cheia de estradas e conectores.</li>
+                        <br><li>Ela conecta todos os outros componentes para que possam "conversar", ou seja trabalharem juntos.</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="img/motherboard.png" alt="Placa-mãe">
+                </div>
+            </div>
+            <br><br>
+            <div class="content-with-image">
+                <div class="text-content">
+                    <h3>Processador (CPU)</h3>
+                    <ul>
+                        <br><li>É o "cérebro" do computador.</li>
+                        <br><li>Resolve cálculos e processa decisões rápidas.</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="img/cpu.png" alt="Processador">
+                </div>
+            </div>
+            <br><br>
+            <div class="content-with-image">
+                <div class="text-content">
+                    <h3>Memória RAM</h3>
+                    <ul>
+                        <li>É como uma mesa de trabalho onde se colocam as coisas que estão a ser usadas.</li>
+                        <li>Ajuda o computador a fazer várias tarefas ao mesmo tempo.</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="img/ram.png" alt="Memória RAM">
+                </div>
+            </div>
+            <br><br><div class="content-with-image">
+                <div class="text-content">
+                    <h3>Armazenamento (HD ou SSD)</h3>
+                    <ul>
+                        <li>É o armário onde guardamos jogos, fotos e programas.</li>
+                        <li>O SSD é mais rápido que o HD para acessar e salvar arquivos.</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="img/hdssd.png" alt="HD/SSD">
+                </div>
+            </div>
+            <br><br><div class="content-with-image">
+                <div class="text-content">
+            <h3>Placa Gráfica (GPU)</h3>
+            <ul><br>
+                <li>Cuida das imagens e gráficos.</li>
+                <li>Ideal jogos e design.</li>
+            </ul></div><div class="image-side">
+                <img src="img/grafica.png" alt="HD/SSD">
+            </div>
+        </div>
+            <br><br><br><br><div class="content-with-image">
+                <div class="text-content">
+            <h3>Fonte de Alimentação</h3>
+            <ul>
+                 <li>É como o coração que fornece energia a todos os componentes.</li>
+            </ul></div><div class="image-side">
+                <img src="img/fonte.png" alt="HD/SSD">
+            </div>
+        </div>
+            <br><br><br><br><div class="content-with-image">
+                <div class="text-content">
+            <h3>Cooler (ventoinhas)</h3>
+            <ul>
+                <li>Evita que o computador aqueça enquanto trabalha.</li>
+                <li>Pode arrefecer o CPU (processador) por meio de ar ou de água.</li>
+
+            </ul></div><div class="image-side">
+                <img src="img/cooler.png" alt="HD/SSD">
+            </div>
+        </div>
+            <br><br><div class="content-with-image">
+                <div class="text-content">
+            <h3>Caixa</h3>
+            <ul>
+                <br><li>É a "casa" onde todos os componentes moram.</li>
+                <br><li>Protege e organiza as peças.</li>
+            </ul></div><div class="image-side">
+                <img src="img/caixa.png" alt="HD/SSD">
+            </div>
+        </div>
+            <br><br>
+            <h2>Resumo Divertido</h2>
+            <ul><br>
+                <li><strong>Placa-Mãe:</strong> A "cidade" onde tudo acontece.</li>
+                <br><li><strong>CPU:</strong> O "cérebro" que pensa rápido.</li>
+                <br><li><strong>RAM:</strong> A "mesa de trabalho" para usar as coisas.</li>
+                <br><li><strong>HD/SSD:</strong> O "armário" para guardar tudo.</li>
+                <br><li><strong>Placa de Vídeo:</strong> O "artista" que desenha as imagens.</li>
+                <br><li><strong>Fonte:</strong> O "coração" que dá energia.</li>
+                <br><li><strong>Coolers:</strong> Os "ventiladores" que refrescam.</li>
+                <br><li><strong>Gabinete:</strong> A "casa" que protege tudo.</li>
+            </ul>
+
+        </div>
+<br><br>
+<div class="left-container">
+    <h2>Onde cada componente fica situado</h2>
+    <img src="/img/montagem.png" alt="Montagem do computador" class="left-aligned">
+</div>
+
+    </div>
+
+    
     <footer>
         &copy; 2025 PBJ - Aprenda Programação
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
