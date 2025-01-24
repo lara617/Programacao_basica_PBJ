@@ -1,0 +1,370 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Remove qualquer possível scroll lateral */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Barra de navegação */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Conteúdo principal */
+.section {
+    padding: 100px 20px;
+    margin-top: 60px;
+}
+
+.section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 20px;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilo da seção hero */
+.hero-section {
+    background: url('/img/inicial.png') no-repeat center center/cover;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    width: 100vw; /* Ocupa toda a largura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: left; /* Elementos alinhados à esquerda */
+    padding-left: 10%; /* Espaço da esquerda */
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    text-align: left;
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    background-color: #ffc107;
+    color: #000;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #e0a800;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 80px;
+    width: 95%;
+    max-width: 2200px;
+    height: 90vh;
+    background-color: white;
+    border-radius: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-grid-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.modal-grid-images img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#modalImage {
+    width: 30%;
+    height: auto;
+    max-height: 30vh;
+    object-fit: contain;
+    display: block;
+    margin: 40px auto;
+}
+
+#modalTitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#modalDescription {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 30px;
+    white-space: pre-line;
+}
+
+.modal-text h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.modal-text h2 {
+    font-size: 32px;
+    margin: 25px 0 20px;
+}
+
+.modal-text h3 {
+    font-size: 28px;
+    margin: 20px 0 15px;
+}
+
+.modal-text p {
+    font-size: 24px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.modal-text ul {
+    font-size: 24px;
+    margin: 15px 0 15px 30px;
+}
+
+.modal-text li {
+    font-size: 24px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Estiliza a barra de rolagem */
+.modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Mantendo o layout responsivo */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: calc(100% - 60px);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        width: calc(100% - 40px);
+    }
+}
+
+/* Adicione também um container para a imagem se precisar de mais controle */
+.modal-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.modal-image-container img,
+#modalImage {
+    width: 75% !important;
+    height: auto !important;
+    max-height: 65vh !important;
+    object-fit: contain !important;
+}
+
+.modal-text {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.content-with-image {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 60%;
+    margin-right: 20px;
+}
+
+.image-side {
+    flex: 0 0 auto;
+    max-width: 30%;
+}
+
+.image-side img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.left-aligned {
+    float: left; /* Garante que o conteúdo fique alinhado à esquerda */
+    margin-right: 20px; /* Adiciona espaçamento à direita */
+    max-width: 40%; /* Define a largura máxima, se necessário */
+}
+
+.left-container h2 {
+    margin-top: 0; /* Remove margens extras no título */
+    text-align: left; /* Garante alinhamento do texto */
+}
+
+.left-container img {
+    display: block; /* Garante que a imagem não ocupe a mesma linha que outros elementos */
+    margin-top: 10px;
+    max-width: 100%; /* Ajusta a imagem à largura disponível */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
