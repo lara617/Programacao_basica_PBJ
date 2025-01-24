@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprenda Programação</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Vamos Programar! 🚀</h1>
+        
+        <div class="button-container">
+            <button class="button button-1" data-tooltip="Clique para começar!">
+                <span class="icon">🎮</span>
+                Jogar
+            </button>
+            <button class="button button-quiz" data-tooltip="Teste seus conhecimentos!">
+                <span class="icon">🎯</span>
+                Quiz
+            </button>
+            <button class="button button-4" data-tooltip="Precisa de ajuda?">
+                <span class="icon">❓</span>
+                Ajuda
+            </button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">l
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+    <script type="module" src="script2.js"></script>
+</body>
+</html>
