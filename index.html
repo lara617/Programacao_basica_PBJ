@@ -44,13 +44,13 @@
                 <p>Entrada e saída (Input/Output)</p>
             </div>
             <div class="card" onclick="openModal('programação')">
-                <img src="https://via.placeholder.com/150" alt="Card Image">
+                <img src="/img/programação.png" alt="Card Image">
                 <h3>Programação</h3>
                 <p>O que é a programação</p>
             </div>
             <div class="card" onclick="openModal('algoritmos')">
                 <img src="https://via.placeholder.com/150" alt="Card Image">
-                <h3>algoritmos</h3>
+                <h3>Algoritmos</h3>
                 <p>O que são algoritmos</p>
             </div>
             <div class="card" onclick="openModal('funções')">
@@ -69,8 +69,7 @@
 
     <div id="quizz" class="section">
         <h1>Quizz</h1>
-        <p>Aqui ficarão os quizzes interativos!</p>
-    </div>
+        <button class="hero-button" onclick="window.location.href='jogo.html'">Ir para o Jogo</button>    </div>
 
     <div id="team" class="section">
         <h1>Team</h1>
@@ -295,57 +294,169 @@
 
     <!-- Modal Computador -->
     <div id="modalContent-computador" style="display: none;">
-        <div class="modal-content">
-            <h2>Computador</h2>
+            <h1>Computador</h1>
+            <div class="modal-image-container">
             <img src="/img/computador.avif" alt="Computador" class="modal-image">
-            <p>O que é um computador.</p>
-            <p>Entrada e saída (Input/Output)</p>
         </div>
+            <div class="modal-text">
+       
+       <br><br><br><br><div class="content-with-image">
+        <div class="text-content">
+        <h1>O que é um computador?</h1>
+    <p>
+        Um computador é uma máquina eletrônica que serve para nos ajudar a realizar tarefas de diferentes tipos, 
+        como calcular números, escrever textos, criar desenhos, jogar ou até conversar com pessoas que estão longe.
+    </p>
+    <p>
+        Ele é composto por <strong>hardware</strong>, que são as peças físicas como o teclado, o monitor, placa-mãe, 
+        e de <strong>software</strong>, que são os programas e aplicações que fazem tudo funcionar.
+    </p>
+    <p>
+        O computador também é muito inteligente porque usa um "cérebro" chamado <strong>processador</strong>. 
+        O processador faz bilhões de cálculos por segundo para que consigas assistir vídeos, jogar ou navegar na internet de forma rápida e sem erros.
+    </p>
+    <p>
+        <strong>Resumindo:</strong> um computador é como uma máquina de resolver problemas e realizar tarefas que seriam difícil ou demoradas fazer sozinho.
+    </p>
+</div>
+<div class="image-side">
+    <img src="img/pc.png" alt="PC">
+</div>
+</div>
+<br><br><div class="content-with-image">
+    <div class="text-content">
+    <h1>Entrada, Processamento e Saída de Dados (Input/Output)</h1>
+    <p>
+        Para que o computador funcione bem, ele precisa de dois tipos de dispositivos: os de <strong>entrada de dados</strong> e os de <strong>saída de dados</strong>. 
+        Esses dispositivos ajudam a "conversar" com o computador.
+    
+        <p>
+            Para entender como o computador funciona, imagina um ciclo: 
+            <strong>Entrada de Dados → Processamento → Saída de Dados</strong>.  
+            Vamos explorar cada etapa com mais detalhes:
+        </p></p></div>
+    <div class="image-side">
+        <img src="img/inout.png" alt="INOUT">
+    </div>
     </div>
 
+    <br><br>
+        <h2>Entrada de Dados (Input)</h2>
+        <p><div class="content-with-image">
+        <div class="text-content">
+           <p> A entrada de dados acontece quando <strong>envias informações para o computador</strong>.  
+    </p><p>  É como se você estivesses a falar com ele, dizer o que quer fazer. Para isso, usamos dispositivos como:
+        </p>
+        <ul>
+            <li><strong>Teclado:</strong> para escrever textos, números ou comandos.</li>
+            <li><strong>Rato:</strong> para clicar, arrastar e selecionar opções na tela.</li>
+            <li><strong>Microfone:</strong> para gravar a tua voz ou participar de chamadas.</li>
+            <li><strong>Câmera:</strong> para tirar fotos ou participar de videochamadas.</li>
+        </ul>
+        <p>
+            O computador pega nesses dados e envia para o <strong>processador</strong>.
+        </p></div>
+    <div class="image-side">
+        <img src="img/input.png" alt="INOUT">
+    </div>
+    </div>
+    <br><br><br>
+        <h2>Processamento</h2>
+        <p>
+            O processamento é a etapa em que o computador <strong>trabalha nos dados que recebeu</strong>.  
+            O <strong>processador</strong> (ou CPU) é como o cérebro, que faz cálculos e processas as tuas decisões rapidamente.
+        </p>
+        <p>  <div class="content-with-image">
+        <div class="text-content">
+           <h3><strong> Por exemplo: </strong> </h3>
+            <ul>
+                <li>Se estiveres a escrever um cálculo no teclado (entrada), o processador resolve o problema matemático.</li>
+                <li>Se clicar no ícone de um jogo, o processador inicia o programa e envia as instruções para os outros componentes.</li>
+                <li>O processamento acontece de forma tão rápida que nem percebes que está a acontecer!</li>
+        </p></ul></div>
+        <br>
+        <div class="image-side">
+            <img src="img/proc.png" alt="PROC">
+        </div>
+        </div>
+
+        <br><br><br>
+        <h2>Saída de Dados (Output)</h2>
+        <p>
+            Após o processamento, o computador precisa <strong>de te mostrar o resultado</strong>.  
+            Para isso, ele usa os dispositivos de saída, como:
+        </p><div class="content-with-image">
+            <div class="text-content">
+        <ul>
+            <li><strong>Monitor:</strong> para exibir textos, imagens e vídeos.</li>
+            <li><strong>Fones:</strong> para tocar música ou reproduzir sons.</li>
+            <li><strong>Impressora:</strong> para transformar o que está na tela em algo físico, como um texto ou uma imagem no papel.</li>
+        </ul>
+        <p>
+            Assim, o ciclo completa-se: tu dás a ordem (entrada), o computador processa, e depois ele responde-te (saída)!
+        </p></div>
+        <div class="image-side">
+            <img src="img/saida.png" alt="saida">
+        </div>
+        </div>
+        
+
+    <h2>Como funcionam juntos?</h2>
+    <p>
+        Por exemplo: usas o <strong>teclado</strong> para escrever uma pergunta (entrada), o computador <strong>processa</strong> e depois mostra a resposta na <strong>tela</strong> (saída). 
+        É uma conversa em que você e o computador trabalham juntos!
+    </p>
+<br><br>
+    <h1>Resumo Divertido!</h1>
+    <p>
+        Um computador é como um super-herói digital. Ele é rápido, inteligente e está sempre pronto para ajudar!  
+        Dás as ordens usando dispositivos como o <strong>teclado</strong> ou o <strong>rato</strong>,  
+        e ele responde mostrando tudo no <strong>monitor</strong> ou a falar contigo pelos <strong>alto-falantes</strong>.  
+        Juntos, vocês formam uma dupla imbatível para aprender, criar ou se divertirem! 
+    </p>
+    </div>
+</div>
     <!-- Modal Programação-->
     <div id="modalContent-programação" style="display: none;">
         <div class="modal-content">
             <h2>Programação</h2>
-            <img src="/img/perifericos.png" alt="Programação" class="modal-image">
-            <p>Informação detalhada sobre periféricos.</p>
+            <img src="/img/programação.png" alt="Programação" class="modal-image">
+            <p>Oque é a programação</p>
         </div>
     </div>
 
         <!-- Modal Algoritmos -->
         <div id="modalContent-algoritmos" style="display: none;">
             <div class="modal-content">
-                <h2>Computador</h2>
+                <h2>Algoritmos</h2>
                 <img src="/img/computador.avif" alt="Algoritmos" class="modal-image">
-                <p>Informação detalhada sobre o computador.</p>
-                <p>Entrada e saída (Input/Output)</p>
+                <p>O que são algoritmos</p>
             </div>
         </div>
 
             <!-- Modal Funções -->
     <div id="modalContent-funções" style="display: none;">
         <div class="modal-content">
-            <h2>Computador</h2>
+            <h2>Funções</h2>
             <img src="/img/computador.avif" alt="Funções" class="modal-image">
-            <p>Informação detalhada sobre o computador.</p>
-            <p>Entrada e saída (Input/Output)</p>
+            <p>O que são funções</p>
+            <p>O que são condições (If/Else)</p>
         </div>
     </div>
 
         <!-- Modal Prog Obj -->
         <div id="modalContent-prog obj" style="display: none;">
             <div class="modal-content">
-                <h2>Computador</h2>
+                <h2>Programação Orientada a Objetos</h2>
                 <img src="/img/computador.avif" alt="Prog Obj" class="modal-image">
-                <p>Informação detalhada sobre o computador.</p>
-                <p>Entrada e saída (Input/Output)</p>
+                <p>O que é programação orientada a objetos</p>
             </div>
         </div>
 
 
-    <footer>
-        &copy; 2025 PBJ - Aprenda Programação
-    </footer>
+        <footer>
+            &copy; 2025 PBJ - Aprenda Programação
+        </footer>
     <script src="script.js"></script>
 </body>
 </html>
