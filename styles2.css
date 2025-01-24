@@ -1,0 +1,737 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: background 0.5s ease;
+    padding-top: 50px;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.title {
+    color: #00796b;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    animation: bounce 1s ease infinite;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #00796b, #004d40);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    width: 250px;
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #004d40, #00332b);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    transform: translateY(2px);
+}
+
+.button::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.button:hover::before {
+    opacity: 1;
+}
+
+.button-1 { background: linear-gradient(45deg, #FF6B6B, #FF8E8E); }
+.button-2 { background: linear-gradient(45deg, #4ECDC4, #6BE5DC); }
+.button-3 { background: linear-gradient(45deg, #FFD93D, #FFE566); }
+.button-4 { background: linear-gradient(45deg, #95E1D3, #B5F1E6); }
+.button-quiz { 
+    background: linear-gradient(45deg, #9b59b6, #8e44ad); 
+}
+
+.icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 70%;
+    max-width: 500px;
+    margin: 15% auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: modalOpen 0.4s ease-out;
+}
+
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #e53935;
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes modalOpen {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-container {
+        gap: 15px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}
+
+.learning-topics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.topic-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+}
+
+.topic-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.topic-card p {
+    color: #34495e;
+    font-size: 0.9em;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.topics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.topic-button {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.topic-button:hover {
+    background: #e9ecef;
+    transform: translateX(10px);
+}
+
+.topic-button.active {
+    background: #e9ecef;
+}
+
+.topic-button h3 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.topic-content {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-topics-button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.close-topics-button:hover {
+    background: #ff5252;
+    transform: scale(1.02);
+}
+
+.close-topics-button:active {
+    transform: scale(0.98);
+}
+
+/* Estilos do jogo */
+.game-container {
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    gap: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.blocks-container, .program-area, .game-preview {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.command-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.block {
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: move;
+    transition: transform 0.2s;
+}
+
+.block:hover {
+    transform: translateX(5px);
+}
+
+.block.dragging {
+    opacity: 0.5;
+}
+
+.program-blocks {
+    min-height: 200px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.program-block {
+    background: #2196F3;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.program-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.run-button, .clear-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.run-button {
+    background: #4CAF50;
+    color: white;
+}
+
+.clear-button {
+    background: #f44336;
+    color: white;
+}
+
+.run-button:hover, .clear-button:hover {
+    transform: scale(1.05);
+}
+
+.game-stage {
+    width: 100%;
+    height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.character {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    transition: transform 0.5s;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Estilos do Quiz */
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.quiz-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quiz-score {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+.question-text {
+    font-size: 1.3em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.option-button {
+    padding: 15px 20px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.option-button:hover:not([disabled]) {
+    background: #3498db;
+    color: white;
+    transform: translateX(10px);
+}
+
+.option-button.correct {
+    background: #2ecc71;
+    color: white;
+    border-color: #27ae60;
+}
+
+.option-button.wrong {
+    background: #e74c3c;
+    color: white;
+    border-color: #c0392b;
+}
+
+.quiz-button {
+    padding: 12px 25px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    margin: 10px auto;
+    display: block;
+}
+
+.quiz-button:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+#quiz-results {
+    text-align: center;
+    padding: 20px;
+}
+
+#quiz-results h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.option-button:disabled {
+    cursor: not-allowed;
+}
+
+/* Adicionar estilos para as conquistas */
+.achievements-container {
+    padding: 20px;
+}
+
+.stats-summary {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.achievement-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-card.locked {
+    opacity: 0.5;
+    filter: grayscale(1);
+}
+
+.achievement-card.unlocked {
+    border: 2px solid #4CAF50;
+}
+
+.achievement-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.achievement-notification {
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#view-achievements {
+    margin-top: 10px;
+    background: #9b59b6;
+}
+
+.quiz-history {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.quiz-history h4 {
+    margin-bottom: 10px;
+}
+
+.history-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para o Centro de Ajuda */
+.help-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.help-section {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.help-section h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.help-content {
+    color: #34495e;
+    line-height: 1.6;
+}
+
+.help-content p {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.help-content p:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.faq-question {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #e9ecef;
+}
+
+.faq-answer {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #fff;
+    margin-top: 5px;
+    border-radius: 0 0 8px 8px;
+}
+
+.faq-icon {
+    transition: transform 0.3s;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-input {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea.contact-input {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-submit {
+    background: #3498db;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.contact-submit:hover {
+    background: #2980b9;
+}
+
+.contact-button {
+    background: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.contact-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.button-login {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.login-input {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.login-button {
+    background: #3498db;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.login-button:hover {
+    background: #2980b9;
+}
+
+/* Adicionar ao final do arquivo */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #eee;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
