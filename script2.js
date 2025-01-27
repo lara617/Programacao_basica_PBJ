@@ -1,5 +1,3 @@
-
-
 console.log("script.js carregado com sucesso!");
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -13,246 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalText = document.getElementById('modal-text');
     const closeButton = document.querySelector('.close-button');
 
-    const topicosAprendizagem = {
-        'componentes': {
-            titulo: '💻 Componentes do Computador',
-            conteudo: `
-                O computador é como um quebra-cabeça gigante, onde cada peça tem uma função especial:<br><br>
-
-                🧠 Processador (CPU):<br>
-                • É o cérebro do computador<br>
-                • Faz todos os cálculos e decisões<br>
-                • Quanto mais rápido, melhor o desempenho<br>
-                • Exemplos: Intel Core i5, AMD Ryzen<br><br>
-
-                📝 Memória RAM:<br>
-                • É como uma mesa de trabalho<br>
-                • Guarda as informações que estamos usando no momento<br>
-                • Quanto mais RAM, mais programas podemos usar ao mesmo tempo<br>
-                • Medida em GB (Gigabytes)<br><br>
-
-                💾 Disco Rígido (HD/SSD):<br>
-                • É como uma biblioteca gigante<br>
-                • Guarda todos os arquivos, jogos e programas<br>
-                • HD é mais lento mas tem mais espaço<br>
-                • SSD é mais rápido mas geralmente menor<br><br>
-
-                🔌 Placa-mãe:<br>
-                • É como uma cidade onde todos os componentes moram<br>
-                • Conecta todas as peças<br>
-                • Controla como as peças se comunicam<br>
-                • Tem vários conectores diferentes<br><br>
-
-                🎮 Placa de Vídeo:<br>
-                • Responsável por mostrar imagens e vídeos<br>
-                • Muito importante para jogos<br>
-                • Pode ser integrada ou dedicada<br>
-                • Exemplos: NVIDIA GeForce, AMD Radeon<br><br>
-
-                🔋 Fonte de Alimentação:<br>
-                • É como o coração do computador<br>
-                • Fornece energia para todas as peças<br>
-                • Protege os componentes de problemas elétricos<br>
-                • Diferentes potências para diferentes necessidades<br><br>
-
-                💨 Coolers e Ventiladores:<br>
-                • São como ventiladores que refrescam o computador<br>
-                • Evitam que as peças esquentem demais<br>
-                • Podem ter luzes coloridas (RGB)<br>
-                • Muito importantes para o funcionamento seguro<br><br>
-
-                🖥️ Gabinete:<br>
-                • É a casa onde todos os componentes ficam<br>
-                • Protege as peças<br>
-                • Ajuda na circulação do ar<br>
-                • Pode ter diferentes tamanhos e designs<br>
-            `
-        },
-        'algoritmos': {
-            titulo: '🔄 Algoritmos: O Passo a Passo da Programação',
-            conteudo: `
-                Algoritmos são como receitas de bolo para o computador! 🍰<br><br>
-
-                O que é um Algoritmo:<br>
-                • É uma sequência de passos para resolver um problema<br>
-                • Deve ser claro e preciso<br>
-                • Tem início, meio e fim<br>
-                • Pode ser repetido várias vezes<br><br>
-
-                Exemplos do Dia a Dia:<br>
-                1. Fazer um Sanduíche:<br>
-                   - Pegar duas fatias de pão<br>
-                   - Passar manteiga<br>
-                   - Adicionar queijo<br>
-                   - Fechar o sanduíche<br><br>
-
-                2. Escovar os Dentes:<br>
-                   - Pegar escova<br>
-                   - Colocar pasta<br>
-                   - Escovar por 2 minutos<br>
-                   - Enxaguar<br><br>
-
-                Na Programação:<br>
-                • Usamos algoritmos para tudo<br>
-                • Podem ser simples ou complexos<br>
-                • Precisam ser eficientes<br>
-                • Podem ter decisões (if/else)<br>
-                • Podem ter repetições (loops)<br><br>
-
-                Dica: Comece com algoritmos simples e vá aumentando a complexidade!<br>
-            `
-        },
-        'computador': {
-            titulo: '🖥️ O que é um Computador: A Máquina Mágica',
-            conteudo: `
-                O Computador é uma máquina incrível que:<br><br>
-
-                🔢 Processa Informações:<br>
-                • Faz cálculos complexos em segundos<br>
-                • Organiza dados de forma eficiente<br>
-                • Executa milhões de operações por segundo<br>
-                • Segue instruções precisas (programas)<br><br>
-
-                📦 Armazenamento:<br>
-                • Guarda fotos, vídeos e documentos<br>
-                • Organiza arquivos em pastas<br>
-                • Mantém informações mesmo desligado<br>
-                • Tem diferentes tipos de memória<br><br>
-
-                🎯 Tarefas que Realiza:<br>
-                • Navegar na internet<br>
-                • Jogar videogames<br>
-                • Editar fotos e vídeos<br>
-                • Escrever documentos<br>
-                • Fazer videoconferências<br>
-                • Programar novos softwares<br><br>
-
-                🔍 Curiosidades:<br>
-                • Os primeiros computadores ocupavam salas inteiras<br>
-                • Hoje temos computadores no bolso (smartphones)<br>
-                • Podem ser conectados entre si (internet)<br>
-                • Existem supercomputadores que fazem previsão do tempo<br>
-            `
-        },
-        'entrada-saida': {
-            titulo: '🔄 Entrada e Saída de Dados: Como o Computador se Comunica',
-            conteudo: `
-                Como nos comunicamos com o computador? 🤔<br><br>
-
-                📥 Dispositivos de Entrada:<br>
-                1. Teclado:<br>
-                    • Digite textos e comandos<br>
-                    • Teclas de atalho<br>
-                    • Diferentes layouts (QWERTY, AZERTY)<br><br>
-
-                2. Mouse:<br>
-                    • Controle o cursor<br>
-                    • Cliques e rolagem<br>
-                    • Mouse gamer com botões extras<br><br>
-
-                3. Outros Dispositivos:<br>
-                    • Microfone para voz<br>
-                    • Webcam para imagens<br>
-                    • Scanner para documentos<br>
-                    • Joystick para jogos<br><br>
-
-                📥 Dispositivos de Saída:<br>
-                1. Monitor:<br>
-                    • Mostra imagens e textos<br>
-                    • Diferentes resoluções<br>
-                    • Telas touch screen<br><br>
-
-                2. Alto-falantes:<br>
-                    • Reproduzem sons e música<br>
-                    • Avisos do sistema<br>
-                    • Áudio de jogos e vídeos<br><br>
-
-                3. Impressora:<br>
-                    • Imprime documentos<br>
-                    • Fotos e imagens<br>
-                    • Diferentes tecnologias (jato de tinta, laser)<br><br>
-
-                💡 Dica: Quanto melhor a qualidade dos dispositivos de entrada e saída,<br>
-                melhor será sua experiência com o computador!<br>
-            `
-        },
-        'funcoes': {
-            titulo: '📦 Funções',
-            conteudo: `
-                Funções são como mini-programas que fazem uma tarefa específica.<br><br>
-                
-                Exemplo:<br>
-                function dizerOla(nome) {<br>
-                    return "Olá, " + nome + "!";<br>
-                }<br><br>
-                
-                É como uma máquina que recebe algo e devolve algo transformado!<br>
-            `
-        },
-        'if-else': {
-            titulo: '🔀 If/Else (Condições)',
-            conteudo: `
-                São decisões no código, como escolher um caminho:<br><br>
-                
-                Se (está chovendo) {<br>
-                    Levar guarda-chuva<br>
-                } Senão {<br>
-                    Não levar guarda-chuva<br>
-                }<br><br>
-                
-                Ajuda o programa a tomar decisões!<br>
-            `
-        },
-        'oop': {
-            titulo: '🎯 Orientação a Objetos',
-            conteudo: `
-                É uma forma de organizar o código pensando em "objetos" do mundo real.<br><br>
-                
-                Exemplo: Um cachorro<br>
-                • Características (atributos): nome, cor, idade<br>
-                • Ações (métodos): latir, correr, dormir<br><br>
-                
-                Ajuda a organizar programas grandes de forma mais fácil!<br>
-            `
-        }
-    }; 
-
-    // Conteúdo para cada botão
-    const buttonContent = {
-        'button-1': {
-            title: '🎮 Modo Jogo',
-            text: createGameInterface()
-        },
-        'button-4': {
-            title: '❓ Centro de Ajuda',
-            text: createHelpInterface()
-        },
-        'button-quiz': {
-            title: '🎯 Quiz de Programação',
-            text: createQuizInterface()
-        }
-    };
-
-    function createTopicsList(topicos) {
-        let html = '<div class="topics-list">';
-        html += `
-            <button class="close-topics-button" style="display: none;">
-                ❌ Fechar Todos os Tópicos
-            </button>
-        `;
-        for (let key in topicos) {
-            html += `
-                <div class="topic-button" data-topic="${key}">
-                    <h3>${topicos[key].titulo}</h3>
-                    <div class="topic-content" style="display: none;">
-                        <p>${topicos[key].conteudo}</p>
-                    </div>
-                </div>
-            `;
-        }
-        html += '</div>';
-        return html;
-    }
 
     // Adiciona efeitos sonoros e visuais aos botões
     document.querySelectorAll('.button').forEach(button => {
@@ -270,6 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (buttonClasses.contains('button-1')) buttonKey = 'button-1';
             else if (buttonClasses.contains('button-4')) buttonKey = 'button-4';
             else if (buttonClasses.contains('button-quiz')) buttonKey = 'button-quiz';
+            else if (buttonClasses.contains('button-learn')) {
+                // Redireciona para index.html ao clicar no botão "Aprender"
+                window.location.href = 'index.html';
+                return; // Para evitar a execução do código abaixo
+            }
 
             if (buttonKey && buttonContent[buttonKey]) {
                 const modal = document.getElementById('modal');
@@ -524,21 +287,22 @@ function initializeGame() {
     });
 
     programArea.addEventListener('dragover', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Permite que o contêiner aceite o drop
     });
 
     programArea.addEventListener('drop', (e) => {
         e.preventDefault();
         const command = e.dataTransfer.getData('text/plain');
-        const newBlock = createProgramBlock(command);
-        programArea.appendChild(newBlock);
+        const newBlock = createProgramBlock(command); // Cria um novo bloco
+        programArea.appendChild(newBlock); // Adiciona o bloco ao contêiner
     });
 
     // Executar programa
     runButton.addEventListener('click', async () => {
         const commands = Array.from(programArea.children).map(block => block.dataset.command);
+        console.log("Comandos a serem executados:", commands); // Debug: Mostra os comandos
         runButton.disabled = true;
-        await executeCommands(commands, character);
+        await executeCommands(commands, character); // Executa todos os comandos
         runButton.disabled = false;
     });
 
@@ -549,25 +313,42 @@ function initializeGame() {
     });
 }
 
+// Função para criar um bloco de programa
 function createProgramBlock(command) {
     const block = document.createElement('div');
-    block.className = 'program-block';
-    block.dataset.command = command;
-    block.innerHTML = document.querySelector(`[data-command="${command}"]`).innerHTML;
-    return block;
+    block.className = 'program-block'; // Classe para estilização
+    block.dataset.command = command; // Armazena o comando no bloco
+
+    // Mapeia os comandos para o texto em português de Portugal
+    const commandTexts = {
+        moveRight: "Mover para a Direita",
+        moveLeft: "Mover para a Esquerda",
+        moveUp: "Mover para Cima",
+        moveDown: "Mover para Baixo",
+        jump: "Pular",
+        rotate: "Girar",
+        repeat: "Repetir 3x"
+    };
+
+    block.textContent = commandTexts[command] || command; // Define o texto do bloco
+    block.draggable = false; // Desabilita o arrasto do bloco dentro do contêiner
+
+    // Adiciona um evento para remover o bloco ao clicar
+    block.addEventListener('click', () => {
+        block.remove(); // Remove o bloco ao clicar
+    });
+
+    return block; // Retorna o novo bloco
 }
 
 async function executeCommands(commands, character) {
     resetCharacter(character);
     
     for (const command of commands) {
-        await executeCommand(command, character);
-        await new Promise(resolve => setTimeout(resolve, 500));
+        console.log(`Executando comando: ${command}`); // Debug: Mostra o comando atual
+        await executeCommand(command, character); // Executa cada comando
+        await new Promise(resolve => setTimeout(resolve, 500)); // Aguarda 500ms entre os comandos
     }
-}
-
-function resetCharacter(character) {
-    character.style.transform = 'translate(0, 0) rotate(0deg)';
 }
 
 async function executeCommand(command, character) {
@@ -610,279 +391,12 @@ async function executeCommand(command, character) {
                 await new Promise(resolve => setTimeout(resolve, 300));
             }
             break;
-        case 'wait':
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            break;
-        case 'dance':
-            for (let i = 0; i < 4; i++) {
-                character.style.transform = `translate(${currentX + (i % 2 ? 20 : -20)}px, ${currentY}px) rotate(${currentRotation + 45 * i}deg)`;
-                await new Promise(resolve => setTimeout(resolve, 200));
-            }
-            character.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${currentRotation}deg)`;
-            break;
-        case 'wave':
-            character.innerHTML = '👋';
-            await new Promise(resolve => setTimeout(resolve, 500));
-            character.innerHTML = '🤖';
-            break;
-        case 'spin':
-            character.style.transition = 'transform 1s';
-            character.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${currentRotation + 360}deg)`;
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            character.style.transition = 'transform 0.5s';
-            break;
-        case 'shrink':
-            character.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${currentRotation}deg) scale(0.5)`;
-            break;
-        case 'grow':
-            character.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${currentRotation}deg) scale(1.5)`;
-            break;
+        // Adicione outros comandos conforme necessário
+        default:
+            console.error(`Comando desconhecido: ${command}`); // Debug: Comando não reconhecido
     }
 }
-
-const quizQuestions = [
-    {
-        pergunta: "Qual componente é considerado o 'cérebro' do computador?",
-        opcoes: [
-            "Memória RAM",
-            "Processador (CPU)",
-            "Disco Rígido",
-            "Placa de Vídeo"
-        ],
-        resposta: 1
-    },
-    {
-        pergunta: "O que é um algoritmo?",
-        opcoes: [
-            "Um tipo de vírus de computador",
-            "Uma linguagem de programação",
-            "Uma sequência de passos para resolver um problema",
-            "Um componente do hardware"
-        ],
-        resposta: 2
-    },
-    {
-        pergunta: "Qual é um exemplo de dispositivo de entrada?",
-        opcoes: [
-            "Monitor",
-            "Impressora",
-            "Alto-falante",
-            "Teclado"
-        ],
-        resposta: 3
-    },
-    {
-        pergunta: "Para que serve uma função em programação?",
-        opcoes: [
-            "Para deixar o código mais bonito",
-            "Para realizar uma tarefa específica e reutilizável",
-            "Para criar vírus",
-            "Para formatar o computador"
-        ],
-        resposta: 1
-    },
-    {
-        pergunta: "Em programação, o que faz a estrutura IF/ELSE?",
-        opcoes: [
-            "Toma decisões baseadas em condições",
-            "Apenas repete código",
-            "Formata textos",
-            "Cria loops infinitos"
-        ],
-        resposta: 0
-    },
-    {
-        pergunta: "O que é Orientação a Objetos?",
-        opcoes: [
-            "Uma forma de organizar arquivos no computador",
-            "Um tipo de vírus",
-            "Uma forma de organizar o código usando objetos do mundo real",
-            "Um programa de edição de imagens"
-        ],
-        resposta: 2
-    },
-    {
-        pergunta: "Para que serve a Memória RAM?",
-        opcoes: [
-            "Para guardar arquivos permanentemente",
-            "Para armazenar dados temporários em uso",
-            "Para conectar à internet",
-            "Para mostrar imagens na tela"
-        ],
-        resposta: 1
-    },
-    {
-        pergunta: "O que é um dispositivo de saída?",
-        opcoes: [
-            "Mouse",
-            "Teclado",
-            "Microfone",
-            "Monitor"
-        ],
-        resposta: 3
-    },
-    {
-        pergunta: "O que é um loop em programação?",
-        opcoes: [
-            "Uma forma de repetir código várias vezes",
-            "Um erro no programa",
-            "Uma forma de salvar dados",
-            "Um tipo de variável"
-        ],
-        resposta: 0
-    },
-    {
-        pergunta: "Qual é a função principal da memória RAM?",
-        opcoes: [
-            "Armazenar dados permanentemente",
-            "Processar cálculos",
-            "Armazenar dados temporários durante a execução",
-            "Conectar à internet"
-        ],
-        resposta: 2
-    },
-    {
-        pergunta: "O que significa HTML?",
-        opcoes: [
-            "High Tech Modern Language",
-            "Hyper Text Markup Language",
-            "Hard Text Memory Link",
-            "Hyper Transfer Machine Language"
-        ],
-        resposta: 1
-    },
-    {
-        pergunta: "O que é um bug em programação?",
-        opcoes: [
-            "Um vírus de computador",
-            "Um novo recurso",
-            "Um erro ou falha no programa",
-            "Uma linguagem de programação"
-        ],
-        resposta: 2
-    },
-    {
-        pergunta: "Para que serve o CSS?",
-        opcoes: [
-            "Criar animações 3D",
-            "Estilizar e formatar páginas web",
-            "Processar dados do servidor",
-            "Criar bancos de dados"
-        ],
-        resposta: 1
-    },
-    {
-        pergunta: "O que é uma variável em programação?",
-        opcoes: [
-            "Um erro no código",
-            "Um espaço para armazenar dados",
-            "Um tipo de vírus",
-            "Uma página da web"
-        ],
-        resposta: 1
-    },
-    {
-        pergunta: "O que é um array?",
-        opcoes: [
-            "Um tipo de erro",
-            "Uma função matemática",
-            "Uma lista ordenada de elementos",
-            "Um dispositivo de entrada"
-        ],
-        resposta: 2
-    },
-    {
-        pergunta: "O que significa 'debuggar' um programa?",
-        opcoes: [
-            "Criar um novo programa",
-            "Encontrar e corrigir erros",
-            "Deletar o programa",
-            "Adicionar novos recursos"
-        ],
-        resposta: 1
-    },
-    {
-        pergunta: "O que é um servidor?",
-        opcoes: [
-            "Um tipo de computador que fornece serviços a outros computadores",
-            "Um programa antivírus",
-            "Um tipo de teclado",
-            "Uma linguagem de programação"
-        ],
-        resposta: 0
-    },
-    {
-        pergunta: "O que é um banco de dados?",
-        opcoes: [
-            "Um programa de edição de texto",
-            "Uma coleção organizada de informações",
-            "Um tipo de vírus",
-            "Um dispositivo de hardware"
-        ],
-        resposta: 1
-    },
-    {
-        pergunta: "O que é um algoritmo de busca?",
-        opcoes: [
-            "Um programa de antivírus",
-            "Uma forma de organizar arquivos",
-            "Um método para encontrar informações específicas",
-            "Um tipo de hardware"
-        ],
-        resposta: 2
-    },
-    {
-        pergunta: "O que é programação orientada a objetos?",
-        opcoes: [
-            "Um tipo de vírus",
-            "Uma forma de organizar código usando objetos",
-            "Um método de digitar mais rápido",
-            "Um tipo de hardware"
-        ],
-        resposta: 1
-    },
-    {
-        pergunta: "O que é uma API?",
-        opcoes: [
-            "Um tipo de computador",
-            "Um programa de edição de imagens",
-            "Uma interface para comunicação entre programas",
-            "Um tipo de cabo"
-        ],
-        resposta: 2
-    },
-    {
-        pergunta: "O que é um firewall?",
-        opcoes: [
-            "Um programa que protege contra ameaças de rede",
-            "Um tipo de processador",
-            "Uma linguagem de programação",
-            "Um editor de texto"
-        ],
-        resposta: 0
-    },
-    {
-        pergunta: "O que é o Git?",
-        opcoes: [
-            "Uma linguagem de programação",
-            "Um sistema de controle de versão",
-            "Um tipo de banco de dados",
-            "Um programa de edição de imagens"
-        ],
-        resposta: 1
-    },
-    {
-        pergunta: "O que é um compilador?",
-        opcoes: [
-            "Um programa que traduz código para linguagem de máquina",
-            "Um tipo de memória",
-            "Um dispositivo de entrada",
-            "Uma rede social"
-        ],
-        resposta: 0
-    }
-];
-
+// Função para criar a interface do quiz
 function createQuizInterface() {
     return `
         <div class="quiz-container">
@@ -908,6 +422,58 @@ function createQuizInterface() {
         </div>
     `;
 }
+
+// Questões do quiz
+const questions = [
+    {
+        question: "Qual é a saída de: console.log(typeof null)?",
+        options: ["object", "null", "undefined", "boolean"],
+        answer: "object",
+    },
+    {
+        question: "Qual linguagem é executada no navegador?",
+        options: ["Python", "Java", "JavaScript", "C++"],
+        answer: "JavaScript",
+    },
+    {
+        question: "Qual método converte JSON em objeto?",
+        options: ["JSON.parse()", "JSON.stringify()", "JSON.object()", "JSON.convert()"],
+        answer: "JSON.parse()",
+    },
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+// Função para inicializar o quiz
+function initializeQuiz() {
+    const app = document.getElementById("app");
+    app.innerHTML = createQuizInterface();
+
+    document.getElementById("start-quiz").addEventListener("click", startQuiz);
+    document.getElementById("next-question").addEventListener("click", showNextQuestion);
+    document.getElementById("restart-quiz").addEventListener("click", initializeQuiz);
+}
+
+// Função para começar o quiz
+function startQuiz() {
+    document.getElementById("start-quiz").style.display = "none";
+    document.getElementById("next-question").style.display = "block";
+    document.getElementById("total").textContent = questions.length;
+    showNextQuestion();
+}
+
+// Função para exibir a próxima pergunta
+function showNextQuestion() {
+    const questionContainer = document.getElementById("question-container");
+    const optionsContainer = document.querySelector(".options-container");
+
+    // Limpar opções anteriores
+    optionsContainer.innerHTML = "";
+
+    if (currentQuestionIndex < questions.length) {
+        const currentQuestion = q
+
 
 function initializeQuiz() {
     let currentQuestion = 0;
@@ -1646,4 +1212,68 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Adicionar manipuladores de eventos globais
     window.handleLogin = userSystem.handleLogin.bind(userSystem);
     window.restartQuiz = restartQuiz;
+});
+
+// Função para criar a interface de aprendizado
+function createLearnInterface() {
+    return `
+        <div class="learn-container">
+            <h2>📚 Tópicos de Aprendizado</h2>
+            <p>Atualmente, não há tópicos disponíveis para aprendizado.</p>
+        </div>
+    `;
+}
+
+// Adicionar evento ao botão "Quiz"
+document.querySelector('.button-quiz').addEventListener('click', function() {
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalText = document.getElementById('modal-text');
+
+    modalTitle.textContent = '🎯 Quiz de Programação';
+    modalText.innerHTML = createQuizButtons(); // Cria os botões do quiz
+    modal.style.display = 'block'; // Exibe o modal
+
+    console.log("Modal exibido com os botões do quiz."); // Log para depuração
+});
+
+// Função para criar os botões do quiz
+function createQuizButtons() {
+    const buttons = [];
+    for (let i = 1; i <= 7; i++) {
+        buttons.push(`
+            <button class="quiz-button" onclick="startQuiz(${i})">Iniciar Quiz ${i}</button>
+        `);
+    }
+    console.log("Botões do quiz criados:", buttons); // Log para depuração
+    return buttons.join(''); // Retorna todos os botões como uma string
+}
+
+// Função para iniciar o quiz
+function startQuiz(quizNumber) {
+    console.log(`Iniciando o Quiz ${quizNumber}`); // Aqui você pode adicionar a lógica para iniciar o quiz
+    // Fechar o modal
+    document.getElementById('modal').style.display = 'none';
+}
+
+// Adicionar evento para fechar o modal
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modal');
+    const closeButton = document.querySelector('.close-button');
+
+    // Verificar se os elementos existem no DOM
+    if (!modal || !closeButton) {
+        console.error('Elemento modal ou botão de fechamento não encontrado.');
+        return;
+    }
+
+    // Adicionar evento ao botão de fechamento
+    closeButton.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    // Exemplo de como abrir o modal (adicione onde for necessário)
+    document.querySelector('.button.button-quiz').addEventListener('click', function () {
+        modal.style.display = 'block';
+    });
 });
