@@ -10,7 +10,8 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* Remove qualquer possível scroll lateral */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body {
@@ -50,6 +51,7 @@ body {
 .section {
     padding: 100px 20px;
     margin-top: 60px;
+    margin: 0;
 }
 
 .section h1 {
@@ -113,15 +115,18 @@ footer {
 
 /* Estilo da seção hero */
 .hero-section {
-    background: url('/img/inicial.png') no-repeat center center/cover;
-    height: 100vh; /* Ocupa toda a altura da tela */
-    width: 100vw; /* Ocupa toda a largura da tela */
+    background: url('/img/inicial.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: left; /* Elementos alinhados à esquerda */
-    padding-left: 10%; /* Espaço da esquerda */
+    justify-content: flex-start;
+    padding-left: 10%;
+    padding-top: 0;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    position: relative;
 }
 
 .hero-content {
@@ -289,7 +294,7 @@ footer {
     color: red;
 }
 
-/* Mantendo o layout responsivo */
+/* Responsividade */
 @media (max-width: 1024px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -304,7 +309,7 @@ footer {
     }
 }
 
-/* Adicione também um container para a imagem se precisar de mais controle */
+/* Ajustes no container de imagem */
 .modal-image-container {
     width: 100%;
     display: flex;
@@ -351,20 +356,24 @@ footer {
 }
 
 .left-aligned {
-    float: left; /* Garante que o conteúdo fique alinhado à esquerda */
-    margin-right: 20px; /* Adiciona espaçamento à direita */
-    max-width: 40%; /* Define a largura máxima, se necessário */
+    float: left;
+    margin-right: 20px;
+    max-width: 40%;
 }
 
 .left-container h2 {
-    margin-top: 0; /* Remove margens extras no título */
-    text-align: left; /* Garante alinhamento do texto */
+    margin-top: 0;
+    text-align: left;
 }
 
 .left-container img {
-    display: block; /* Garante que a imagem não ocupe a mesma linha que outros elementos */
+    display: block;
     margin-top: 10px;
-    max-width: 100%; /* Ajusta a imagem à largura disponível */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%;
+    height: auto;
 }
 
+/* Ajustes em títulos e margens */
+h1, h2, h3, p {
+    margin: 0;
+}
