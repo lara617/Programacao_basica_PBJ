@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBJ - Aprenda Programação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="home" class="section">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h2>Programação Básica para Jovens</h2>
+                <h1>Bem vindo à PBJ</h1>
+                <button class="hero-button" id="loading-button">Saber mais</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">PBJ</div>
+        <div>
+            
+            <a href="#home">Início</a>
+            <a href="#aprendizagem">Aprendizagem</a>
+            <a href="#quizz">Quizz</a>
+            <a href="#team">Team</a>
+        </div>
+    </div>
+
+    <!-- Seções -->
+    <div id="aprendizagem" class="section">
+        <h1>Aprendizagem</h1>
+        <div class="grid">
+            <div class="card" onclick="openModal('componentes')">
+                <img src="img/perifericos.png" alt="Componentes">
+                <h3>Componentes</h3>
+                <p>Peças do computador</p>
+            </div>
+            <div class="card" onclick="openModal('computador')">
+                <img src="/img/computador.avif" alt="Computador">
+                <h3>Computador</h3>
+                <p>O que é um computador</p>
+                <p>Entrada e saída (Input/Output)</p>
+            </div>
+            <div class="card" onclick="openModal('programação')">
+                <img src="/img/programação.png" alt="Card Image">
+                <h3>Programação</h3>
+                <p>O que é a programação</p>
+            </div>
+            <div class="card" onclick="openModal('algoritmos')">
+                <img src="/img/Algoritmos.png" alt="Card Image">
+                <h3>Algoritmos</h3>
+                <p>O que são algoritmos</p>
+            </div>
+            <div class="card" onclick="openModal('funções')">
+                <img src="https://via.placeholder.com/150" alt="Card Image">
+                <h3>Funções</h3>
+                <p>O que são funções</p>
+                <p>O que são condições (If/Else)</p>
+            </div>
+            <div class="card" onclick="openModal('prog obj')">
+                <img src="https://via.placeholder.com/150" alt="Card Image">
+                <h3>Programação Orientada a Objetos</h3>
+                <p>O que é programação orientada a objetos</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="quizz" class="section">
+        <h1>Quizz</h1>
+        <button class="hero-button" onclick="window.location.href='jogo.html'">Ir para o Jogo</button>    </div>
+
+    <div id="team" class="section">
+        <h1>Team</h1>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="img/lara.jpg" alt="Membro 1" class="team-photo">
+                <h3>Lara Pires</h3>
+                <a href="https://github.com/lara617" target="_blank"><br>
+                    <img src="img/github_icon.png" alt="GitHub" class="icon"> Lara 617
+                </a><br><br>
+                <a href="https://www.linkedin.com/in/lara-pires-096062336/" target="_blank">
+                    <img src="img/linkedin_icon.png" alt="LinkedIn" class="icon"> Lara Pires
+                </a>
+            </div>
+            <div class="team-member">
+                <img src="img/gui.jpg" alt="Membro 2" class="team-photo">
+                <h3>Guilherme Mesquita</h3>
+                <a href="https://github.com/Guimesquita15" target="_blank"><br>
+                    <img src="img/github_icon.png" alt="GitHub" class="icon"> Guimesquita15
+                </a><br><br>
+                <a href="https://linkedin.com/in/usuario2" target="_blank">
+                    <img src="img/linkedin_icon.png" alt="LinkedIn" class="icon"> usuario2
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Modal Image">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <!-- Conteúdo do Modal -->
+    <div id="modalContent-componentes" style="display: none;">
+        <h1>Componentes</h1>
+        <div class="modal-image-container">
+            <img src="img/perifericos.png" alt="componentes" id="modalImage">
+        </div>
+        <div class="modal-text">
+           
+            <h2>O que são os componentes de um computador?</h2>
+            <ul><br><br>
+                <li>Os componentes de um computador são as peças de uma máquina.</li>
+                <br><li>Eles trabalham juntos para que o computador funcione e faça o desejado.</li>
+                <br><li>É como uma equipa onde cada jogador tem uma função importante!</li>
+            </ul>
+            <br><br><br>
+            <h2>Quais são os componentes de um computador?</h2>
+            <ul><br><br>
+                <li>Placa-Mãe (Motherboard)</li>
+                <br><li>Processador (CPU)</li>
+                <br><li>Memória RAM</li>
+                <br><li>Armazenamento (HD ou SSD)</li>
+                <br><li>Placa Gráfica (GPU)(Não é obrigatório)</li>
+                <br><li>Fonte de Alimentação</li>
+                <br><li>Coolers (ventoinhas)</li>
+                <br><li>Caixa</li>
+            </ul>
+            <br><br><br>
+            <h2>O que faz cada componente?</h2>
+            <div class="content-with-image">
+                <div class="text-content">
+                    <h3>Placa-Mãe</h3>
+                    <ul>
+                        <br><li>É como uma cidade cheia de estradas e conectores.</li>
+                        <br><li>Ela conecta todos os outros componentes para que possam "conversar", ou seja trabalharem juntos.</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="img/motherboard.png" alt="Placa-mãe">
+                </div>
+            </div>
+            <br><br>
+            <div class="content-with-image">
+                <div class="text-content">
+                    <h3>Processador (CPU)</h3>
+                    <ul>
+                        <br><li>É o "cérebro" do computador.</li>
+                        <br><li>Resolve cálculos e processa decisões rápidas.</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="img/cpu.png" alt="Processador">
+                </div>
+            </div>
+            <br><br>
+            <div class="content-with-image">
+                <div class="text-content">
+                    <h3>Memória RAM</h3>
+                    <ul>
+                        <li>É como uma mesa de trabalho onde se colocam as coisas que estão a ser usadas.</li>
+                        <li>Ajuda o computador a fazer várias tarefas ao mesmo tempo.</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="img/ram.png" alt="Memória RAM">
+                </div>
+            </div>
+            <br><br><div class="content-with-image">
+                <div class="text-content">
+                    <h3>Armazenamento (HD ou SSD)</h3>
+                    <ul>
+                        <li>É o armário onde guardamos jogos, fotos e programas.</li>
+                        <li>O SSD é mais rápido que o HD para acessar e salvar arquivos.</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="img/hdssd.png" alt="HD/SSD">
+                </div>
+            </div>
+            <br><br><div class="content-with-image">
+                <div class="text-content">
+            <h3>Placa Gráfica (GPU)</h3>
+            <ul><br>
+                <li>Cuida das imagens e gráficos.</li>
+                <li>Ideal jogos e design.</li>
+            </ul></div><div class="image-side">
+                <img src="img/grafica.png" alt="grafica">
+            </div>
+        </div>
+            <br><br><br><br><div class="content-with-image">
+                <div class="text-content">
+            <h3>Fonte de Alimentação</h3>
+            <ul>
+                 <li>É como o coração que fornece energia a todos os componentes.</li>
+            </ul></div><div class="image-side">
+                <img src="img/fonte.png" alt="fonte">
+            </div>
+        </div>
+            <br><br><br><br><div class="content-with-image">
+                <div class="text-content">
+            <h3>Cooler (ventoinhas)</h3>
+            <ul>
+                <li>Evita que o computador aqueça enquanto trabalha.</li>
+                <li>Pode arrefecer o CPU (processador) por meio de ar ou de água.</li>
+
+            </ul></div><div class="image-side">
+                <img src="img/cooler.png" alt="cooler">
+            </div>
+        </div>
+            <br><br><div class="content-with-image">
+                <div class="text-content">
+            <h3>Caixa</h3>
+            <ul>
+                <br><li>É a "casa" onde todos os componentes moram.</li>
+                <br><li>Protege e deixa as peças organizadas.</li>
+            </ul></div><div class="image-side">
+                <img src="img/caixa.png" alt="caixa">
+            </div>
+        </div>
+            <br><br>
+            <div class="content-with-image">
+                <div class="text-content">
+                    <h3>Periféricos</h3>
+                    <ul>
+                        <li>Periféricos são os acessórios que usamos para interagir com o computador.</li>
+                        <li>Alguns periféricos são essenciais para usar o computador, como o rato, o teclado e o monitor.</li>
+                        <li>Outros periféricos são opcionais, como impressoras, microfones e webcams.</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="img/perifericos1.png" alt="Periféricos">
+                </div>
+            </div>
+            <br><br>            <div class="content-with-image">
+                <div class="text-content">
+            <h2>Periféricos essenciais e as suas funções</h2>
+            <h3>Rato (Mouse)</h3>
+            <ul>
+                <li>É como uma mão virtual para clicar, arrastar e abrir programas no computador.</li>
+                <li>Ajuda a apontar e selecionar o que queremos na tela.</li>
+            </ul> </div>
+            <div class="image-side">
+                <img src="img/rato.png" alt="Rato">
+            </div>
+        </div>
+    <br><br><div class="content-with-image">
+        <div class="text-content">
+            <h3>Teclado</h3>
+            <ul>
+                <li>É o que usamos para escrever palavras, números e comandos.</li>
+                <li>Funciona como uma máquina de escrever moderna.</li>
+            </ul>
+        </div>
+        <div class="image-side">
+            <img src="img/teclado.png" alt="Teclado">
+        </div>
+    </div>
+    <br><br><div class="content-with-image">
+        <div class="text-content">
+            <h3>Monitor</h3>
+            <ul>
+                <li>É a tela onde vemos tudo o que o computador faz.</li>
+                <li>Mostra textos, imagens, vídeos e muito mais.</li>
+            </ul>
+        </div>
+        <div class="image-side">
+            <img src="img/monitor.png" alt="Monitor">
+        </div>
+    </div>
+    <br><br><div class="content-with-image">
+        <div class="text-content">
+            <h2>Outros Periféricos (Opcionais)</h2>
+            <ul><br>
+                <li>Impressora: para imprimir documentos e fotos.</li>
+                <li>Webcam: para fazer videochamadas.</li>
+                <li>Microfone: para gravar áudios ou conversar online.</li>
+                <li>Fones de ouvido: para ouvir músicas ou sons com privacidade.</li>
+            </ul></div>
+            <div class="image-side">
+                <img src="img/opcionais.png" alt="Opcionais">
+            </div>
+        </div>
+
+            <h2>Resumo Divertido</h2>
+            <ul><br>
+                <li><strong>Placa-Mãe:</strong> A "cidade" onde tudo acontece.</li>
+                <br><li><strong>CPU:</strong> O "cérebro" que pensa rápido.</li>
+                <br><li><strong>RAM:</strong> A "mesa de trabalho" para usar as coisas.</li>
+                <br><li><strong>HD/SSD:</strong> O "armário" para guardar tudo.</li>
+                <br><li><strong>Placa de Vídeo:</strong> O "artista" que desenha as imagens.</li>
+                <br><li><strong>Fonte:</strong> O "coração" que dá energia.</li>
+                <br><li><strong>Coolers:</strong> Os "ventiladores" que refrescam.</li>
+                <br><li><strong>Caixa:</strong> A "casa" que protege tudo.</li>
+                <br><li><strong>Componentes:</strong> As partes internas que fazem o computador funcionar.</li>
+                <br><li><strong>Periféricos:</strong> Os acessórios que usamos para interagir com o computador.</li>
+                <br><li><strong>Rato:</strong> A "mão" que nos ajuda a clicar e arrastar.</li>
+                <br><li><strong>Teclado:</strong> A "máquina de escrever" para digitar tudo o que precisamos.</li>
+                <br><li><strong>Monitor:</strong> A "janela mágica" onde tudo aparece.</li>
+            </ul>
+
+        </div>
+<br><br>
+    <h2>Onde cada componente fica situado</h2><br>
+    <img src="/img/montagem.png" alt="Montagem do computador">
+</div>
+
+    </div>
+
+    <!-- Modal Computador -->
+    <div id="modalContent-computador" style="display: none;">
+            <h1>Computador</h1>
+            <div class="modal-image-container">
+            <img src="/img/computador.avif" alt="Computador" class="modal-image">
+        </div>
+            <div class="modal-text">
+       
+       <br><br><br><br><div class="content-with-image">
+        <div class="text-content">
+        <h1>O que é um computador?</h1>
+    <p>
+        Um computador é uma máquina eletrônica que serve para nos ajudar a realizar tarefas de diferentes tipos, 
+        como calcular números, escrever textos, criar desenhos, jogar ou até conversar com pessoas que estão longe.
+    </p>
+    <p>
+        Ele é composto por <strong>hardware</strong>, que são as peças físicas como o teclado, o monitor, placa-mãe, 
+        e de <strong>software</strong>, que são os programas e aplicações que fazem tudo funcionar.
+    </p>
+    <p>
+        O computador também é muito inteligente porque usa um "cérebro" chamado <strong>processador</strong>. 
+        O processador faz bilhões de cálculos por segundo para que consigas assistir vídeos, jogar ou navegar na internet de forma rápida e sem erros.
+    </p>
+    <p>
+        <strong>Resumindo:</strong> um computador é como uma máquina de resolver problemas e realizar tarefas que seriam difícil ou demoradas fazer sozinho.
+    </p>
+</div>
+<div class="image-side">
+    <img src="img/pc.png" alt="PC">
+</div>
+</div>
+<br><br><div class="content-with-image">
+    <div class="text-content">
+    <h1>Entrada, Processamento e Saída de Dados (Input/Output)</h1>
+    <p>
+        Para que o computador funcione bem, ele precisa de dois tipos de dispositivos: os de <strong>entrada de dados</strong> e os de <strong>saída de dados</strong>. 
+        Esses dispositivos ajudam a "conversar" com o computador.
+    
+        <p>
+            Para entender como o computador funciona, imagina um ciclo: 
+            <strong>Entrada de Dados → Processamento → Saída de Dados</strong>.  
+            Vamos explorar cada etapa com mais detalhes:
+        </p></p></div>
+    <div class="image-side">
+        <img src="img/inout.png" alt="INOUT">
+    </div>
+    </div>
+
+    <br><br>
+        <h2>Entrada de Dados (Input)</h2>
+        <p><div class="content-with-image">
+        <div class="text-content">
+           <p> A entrada de dados acontece quando <strong>envias informações para o computador</strong>.  
+    </p><p>  É como se você estivesses a falar com ele, dizer o que quer fazer. Para isso, usamos dispositivos como:
+        </p>
+        <ul>
+            <li><strong>Teclado:</strong> para escrever textos, números ou comandos.</li>
+            <li><strong>Rato:</strong> para clicar, arrastar e selecionar opções na tela.</li>
+            <li><strong>Microfone:</strong> para gravar a tua voz ou participar de chamadas.</li>
+            <li><strong>Câmera:</strong> para tirar fotos ou participar de videochamadas.</li>
+        </ul>
+        <p>
+            O computador pega nesses dados e envia para o <strong>processador</strong>.
+        </p></div>
+    <div class="image-side">
+        <img src="img/input.png" alt="INOUT">
+    </div>
+    </div>
+    <br><br><br>
+        <h2>Processamento</h2>
+        <p>
+            O processamento é a etapa em que o computador <strong>trabalha nos dados que recebeu</strong>.  
+            O <strong>processador</strong> (ou CPU) é como o cérebro, que faz cálculos e processas as tuas decisões rapidamente.
+        </p>
+        <p>  <div class="content-with-image">
+        <div class="text-content">
+           <h3><strong> Por exemplo: </strong> </h3>
+            <ul>
+                <li>Se estiveres a escrever um cálculo no teclado (entrada), o processador resolve o problema matemático.</li>
+                <li>Se clicar no ícone de um jogo, o processador inicia o programa e envia as instruções para os outros componentes.</li>
+                <li>O processamento acontece de forma tão rápida que nem percebes que está a acontecer!</li>
+        </p></ul></div>
+        <br>
+        <div class="image-side">
+            <img src="img/proc.png" alt="PROC">
+        </div>
+        </div>
+
+        <br><br><br>
+        <h2>Saída de Dados (Output)</h2>
+        <p>
+            Após o processamento, o computador precisa <strong>de te mostrar o resultado</strong>.  
+            Para isso, ele usa os dispositivos de saída, como:
+        </p><div class="content-with-image">
+            <div class="text-content">
+        <ul>
+            <li><strong>Monitor:</strong> para exibir textos, imagens e vídeos.</li>
+            <li><strong>Fones:</strong> para tocar música ou reproduzir sons.</li>
+            <li><strong>Impressora:</strong> para transformar o que está na tela em algo físico, como um texto ou uma imagem no papel.</li>
+        </ul>
+        <p>
+            Assim, o ciclo completa-se: tu dás a ordem (entrada), o computador processa, e depois ele responde-te (saída)!
+        </p></div>
+        <div class="image-side">
+            <img src="img/saida.png" alt="saida">
+        </div>
+        </div>
+        
+
+    <h2>Como funcionam juntos?</h2>
+    <p>
+        Por exemplo: usas o <strong>teclado</strong> para escrever uma pergunta (entrada), o computador <strong>processa</strong> e depois mostra a resposta na <strong>tela</strong> (saída). 
+        É uma conversa em que você e o computador trabalham juntos!
+    </p>
+<br><br>
+    <h1>Resumo Divertido!</h1>
+    <p>
+        Um computador é como um super-herói digital. Ele é rápido, inteligente e está sempre pronto para ajudar!  
+        Dás as ordens usando dispositivos como o <strong>teclado</strong> ou o <strong>rato</strong>,  
+        e ele responde mostrando tudo no <strong>monitor</strong> ou a falar contigo pelos <strong>alto-falantes</strong>.  
+        Juntos, vocês formam uma dupla imbatível para aprender, criar ou se divertirem! 
+    </p>
+    </div>
+</div>
+    <!-- Modal Programação-->
+ <div id="modalContent-programação" style="display: none;">
+      <h1>Programação</h1>
+     <div class="modal-image-container">
+          <img src="img/programação.png" alt="Programação" id="modalImage">
+        </div>
+            <div class="modal-text">
+<br><br>
+                <h1>O que é Programação?</h1>
+                <div class="content-with-image">
+                    <div class="text-content">
+                  <p>  Programação é o processo de dar instruções a um computador para que ele realize uma determinada tarefa.</p>
+                   <p> É como criar uma lista de tarefas detalhada que o computador deve seguir, passo a passo,  
+                    para fazer o que queremos, como desenhar algo, resolver cálculos ou até criar jogos!
+                </p></div>
+                <div class="image-side">
+                    <img src="img/programação1.png" alt="saida">
+                </div></div>
+
+                <h2>Para que é utilizada a Programação?</h2>
+                <p>
+                    A programação é usada em quase tudo ao nosso redor que envolve tecnologia.  
+                    Ela ajuda a criar aplicativos, sites, jogos, sistemas de controle de robôs,  
+                    dispositivos inteligentes e muito mais!
+                </p>
+
+                <br><br>
+                <h2>O que são Linguagens de Programação?</h2>
+                <div class="content-with-image">
+                    <div class="text-content">
+                  <p>  Linguagens de programação são as ferramentas que usamos para conversar com os computadores.  
+                    Como os computadores entendem apenas números binários (sequências de 0s e 1s),  
+                    precisamos de uma maneira mais fácil de dar instruções. É aí que entram as linguagens!  
+                </p>
+                <p>
+                    Elas são como um tradutor entre humanos e máquinas.  
+                    Em vez de escrever código confuso como <code>01010101</code>, usamos palavras e frases  
+                    que fazem mais sentido, como <code>print("Olá, mundo!")</code> em Python. Assim, fica muito mais fácil criar coisas incríveis!
+                </p></div>
+                <div class="image-side">
+                    <img src="img/linguagens.png" alt="saida">
+                </div></div>
+
+
+                <h2>O que é o Código Binário?</h2>
+                <div class="content-with-image">
+                    <div class="text-content">
+                <p>
+                    Código binário é o idioma nativo dos computadores.  </p>
+                <p> Ele é formado por uma sequência de dois números: 0 e 1.  </p> 
+                <p> Cada número ou combinação deles representa algo que o computador deve fazer.  </p>
+                <p> É como se os 0s e 1s fossem um "interruptor", onde 0 significa "desligado" e 1 "ligado".  </p>
+                <p> Por trás de cada aplicação, site ou jogo que usas, há muito código binário a funcionar!
+                </p></div>
+                <div class="image-side">
+                    <img src="img/binario.png" alt="binario">
+                </div></div>
+                <br><br><br>
+                <h2>Quais são as Linguagens de Programação mais usadas e para que servem?</h2>
+                <ul>
+                    <li><strong>Python:</strong> Muito usado para criar sites, jogos e até inteligência artificial!</li>
+                    <img src="img/py.png" width="600"><br><br><br>
+                    <li><strong>JavaScript:</strong> Faz com que os sites fiquem interativos, como botões que clicamos e jogos na web.</li>
+                    <img src="img/js.png" width="600"><br><br><br>
+                    <li><strong>Java:</strong> Ideal para aplicações grandes, como o banco ou até o Minecraft.</li>
+                    <img src="img/java.png" width="600"><br><br><br>
+                    <li><strong>C++:</strong> Usado para criar jogos e sistemas que precisam ser rápidos, como os de controle de robôs.</li>
+                    <img src="img/cpp.png" width="600"><br><br><br>
+                    <li><strong>HTML e CSS:</strong> Não são exatamente linguagens de programação, mas são muito importantes para criar sites. O HTML constrói a estrutura, e o CSS deixa tudo bonito. </li>
+                    <img src="img/html.png" width="600"><br><br><br>
+                    <li><strong>Scratch:</strong> Uma linguagem feita especialmente para crianças começarem a programar!</li>
+                    <img src="img/scratch.png" width="600"><br><br><br>
+                </ul>
+                <h2>Resumo Divertido</h2>
+                    <p>Imagina que programar é como ensinar uma dança para um robô.  </p>
+                    <p>Escreves cada passo da dança (em uma linguagem de programação) e o robô aprende a dançar.</p>  
+                    <p>No início, o robô não entende nada além de "pisa no 0" ou "salta no 1" (código binário).</p>  
+                    <p>Mas com as linguagens, você pode dizer coisas como "Gira para a direita" ou "Anda para a frente"  
+                    e ele vai entender rapidamente! No final, o robô pode fazer uma coreografia completa só com o teu código!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal Algoritmos -->
+        <div id="modalContent-algoritmos" style="display: none;">
+            <h1>Algoritmos</h1>
+           <div class="modal-image-container">
+                <img src="img/Algoritmos.png" alt="Algoritmos" id="modalImage">
+              </div>
+                  <div class="modal-text">
+
+                    <h1>O que é um Algoritmo?</h1>
+                    <p>Um algoritmo é uma sequência de passos organizados que ajuda a resolver um problema ou realizar uma tarefa específica.</p>
+                    <p>É como fazer um sumo de laranja! Tens de seguir as etapas certas para que o sumo fique perfeito.</p>
+                <div class="content-with-image">
+                    <div class="text-content">
+                    <h3>Exemplo:</h3>
+                    <ul><br>
+                        <li>Pega em algumas laranjas.</li>
+                        <li>Corta as laranjas ao meio.</li>
+                        <li>Espreme o sumo das laranjas.</li>
+                        <li>Coloca o sumo num copo.</li>
+                        <li>Beber o sumo e aproveitar!</li>
+                    </ul></div>
+                    <div class="image-side">
+                        <img src="img/sumo.png" alt="sumo">
+                    </div></div>
+                    <p>Os computadores funcionam de forma semelhante: seguem instruções bem definidas (os algoritmos) para chegar ao resultado esperado.</p>
+                <br><br>
+                    <h2>Onde os Algoritmos São Usados?</h2>
+                    <div class="content-with-image">
+                        <div class="text-content"><ul>
+                        <li><strong>Jogos:</strong> Para decidir como os personagens se comportam.</li>
+                        <li><strong>Aplicações de Streaming:</strong> Para recomendar filmes ou músicas que gostas.</li>
+                        <li><strong>GPS e Mapas:</strong> Para encontrar o caminho mais rápido.</li>
+                        <li><strong>Supermercados Online:</strong> Para organizar os produtos que vês e sugerir promoções.</li>
+                        <li><strong>Educação:</strong> Em aplicações que ensinam matemática, programação ou línguas, criando exercícios personalizados.</li>
+                        <li><strong>Rotinas diárias:</strong> Até planear como estudar ou fazer uma viagem envolve criar um algoritmo na tua mente!</li>
+                    </ul></div>
+                    <div class="image-side">
+                        <img src="img/mapa.png" alt="mapa">
+                    </div></div>
+                <br><br>
+                    <h2>Tipos de Algoritmos</h2>
+                    <div class="content-with-image">
+                        <div class="text-content"><ul>
+                        <li><strong>Busca:</strong> Encontrar algo, como procurar uma palavra num dicionário.</li>
+                        <li><strong>Ordenação:</strong> Colocar as coisas em ordem, como organizar os teus livros por tamanho, cor ou escritor.</li>
+                        <li><strong>Cálculo:</strong> Resolver problemas matemáticos, como calcular quanto gastaste num mês.</li>
+                        <li><strong>Decisão:</strong> Analisar várias opções para escolher a melhor, como decidir o que comer ao almoço.</li>
+                    </ul></div>
+                    <div class="image-side">
+                        <img src="img/paint.png" alt="paint">
+                    </div></div>
+                <br><br><br>
+                    <h2>Como Funciona um Algoritmo?</h2>
+                    <p>Os algoritmos funcionam em 3 etapas básicas:</p>
+                    <ul>
+                        <li><strong>Entrada:</strong> São os dados que forneces (ex.: as laranjas para o sumo).</li>
+                        <li><strong>Processamento:</strong> O que o algoritmo faz com esses dados (ex.: espremer as laranjas).</li>
+                        <li><strong>Saída:</strong> O resultado final (ex.: o sumo pronto no copo, que podes beber).</li>
+                    </ul>
+                
+                    <br><br><br>
+                        <h3>Resumo Divertido</h3>
+                        <p>Imagina que és um robot ajudante de cozinha e recebeste uma missão: fazer o sumo de laranja perfeito. O algoritmo é como o manual que explica passo a passo o que fazer: pegar nas laranjas, cortar, espremer, colocar no copo e, claro, beber! Se seguires o manual direitinho, vais ter um delicioso sumo. Se errares a ordem, podes acabar com laranjas espalhadas e sem sumo!</p>
+                    
+            </div>
+        </div>
+
+            <!-- Modal Funções -->
+            <div id="modalContent-funções" style="display: none;">
+                <h1>Funções</h1>
+               <div class="modal-image-container">
+                    <img src="img/programação.png" alt="Funções" id="modalImage">
+                  </div>
+                      <div class="modal-text">
+                        njdndjsf
+        </div>
+    </div>
+
+        <!-- Modal Prog Obj -->
+        <div id="modalContent-prog obj" style="display: none;">
+            <h1>Programação Orientada a Objetos</Object></h1>
+           <div class="modal-image-container">
+                <img src="img/programação.png" alt="Prog Obj" id="modalImage">
+              </div>
+                  <div class="modal-text">
+                    mn jknuij
+            </div>
+        </div>
+
+
+        <footer>
+            &copy; 2025 PBJ - Aprenda Programação
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>

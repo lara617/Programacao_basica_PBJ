@@ -20,20 +20,34 @@
                 <span class="icon">🎯</span>
                 Quiz
             </button>
+            <button class="button button-learn" data-tooltip="Aprenda mais sobre programação!">
+                <span class="icon">📚</span>
+                Aprender
+            </button>
             <button class="button button-4" data-tooltip="Precisa de ajuda?">
                 <span class="icon">❓</span>
                 Ajuda
             </button>
         </div>
     </div>
-
-    <div id="modal" class="modal" style="display: none;">
-        <div class="modal-content">l
-            <span class="close-button">&times;</span>
-            <h2 id="modal-title"></h2>
-            <div id="modal-text"></div>
-        </div>
+   <!-- Modal oculto inicialmente -->
+<!-- Modal oculto inicialmente -->
+<!-- Modal oculto inicialmente -->
+<div id="modal" style="display:none;">
+    <span class="close-button">&times;</span>
+    <div id="modal-title">Título do Modal</div>
+    <div id="modal-text">
+         <button class="button" onclick="startQuiz('Componentes')">Quiz sobre Componentes</button>
+        <button class="button" onclick="startQuiz('Computador')">Quiz sobre Computador</button>
+        <button class="button" onclick="startQuiz('Programação')">Quiz sobre Programação</button>
+        <button class="button" onclick="startQuiz('Algoritmos')">Quiz sobre Algoritmos</button>
+        <button class="button" onclick="startQuiz('Funções')">Quiz sobre Funções</button>
+        <button class="button" onclick="startQuiz('POO')">Quiz sobre POO</button>
     </div>
-    <script type="module" src="script2.js"></script>
+</div>
+
+
+
+    <script src="script2.js" defer></script>
 </body>
 </html>

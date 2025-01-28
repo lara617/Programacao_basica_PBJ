@@ -36,26 +36,26 @@ body {
     flex-direction: row;
     gap: 20px;
     justify-content: center;
+    margin: 20px auto 0;
+    max-width: 800px;
 }
 
 .button {
-    padding: 15px 30px;
+    padding: 10px 20px;
     font-size: 18px;
     border-radius: 25px;
-    border: none;
+    width: auto;
     cursor: pointer;
-    background: linear-gradient(45deg, #00796b, #004d40);
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #FFB6C1, #FF69B4);
+    color: black;
+    text-shadow: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-    width: 250px;
 }
 
 .button:hover {
-    background: linear-gradient(45deg, #004d40, #00332b);
+    background: linear-gradient(45deg, #FF69B4, #FF1493);
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .button:active {
@@ -403,19 +403,20 @@ h3 {
 }
 
 .option-button {
-    padding: 15px 20px;
-    border: 2px solid #3498db;
-    border-radius: 10px;
-    background: white;
+    background: #FFB6C1;
+    border: none;
+    border-radius: 15px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 1.1em;
-    transition: all 0.3s ease;
+    color: black;
+    transition: background 0.3s, transform 0.2s;
 }
 
-.option-button:hover:not([disabled]) {
-    background: #3498db;
-    color: white;
-    transform: translateX(10px);
+.option-button:hover {
+    background: #FF69B4;
+    transform: scale(1.05);
 }
 
 .option-button.correct {
@@ -431,21 +432,18 @@ h3 {
 }
 
 .quiz-button {
-    padding: 12px 25px;
-    background: #3498db;
-    color: white;
+    padding: 10px 20px;
+    margin: 5px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
+    background-color: #00796b;
+    color: white;
     cursor: pointer;
-    font-size: 1.1em;
-    transition: all 0.3s ease;
-    margin: 10px auto;
-    display: block;
+    transition: background 0.3s;
 }
 
 .quiz-button:hover {
-    background: #2980b9;
-    transform: scale(1.05);
+    background-color: #004d40;
 }
 
 #quiz-results {
@@ -734,4 +732,72 @@ textarea.contact-input {
     color: #fff;
     font-size: 12px;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.close-button {
+    cursor: pointer;
+    font-size: 20px;
+    float: right;
+}
+
+.correct-answer {
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.next-button {
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    background: #FFB6C1;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: none;
+    transition: background 0.3s;
+}
+
+.next-button:hover {
+    background: #FF69B4;
+}
+
+#modal-title {
+    color: black;
+}
+
+.modal-text {
+    padding: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.option-button, .next-button {
+    margin-top: 10px;
+    padding: 12px 20px;
 }
