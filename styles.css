@@ -147,7 +147,7 @@ footer {
 }
 
 .hero-button {
-    background-color: #ffc107;
+    background-color: #54b6f3;
     color: #000;
     padding: 15px 30px;
     font-size: 1rem;
@@ -160,7 +160,7 @@ footer {
 }
 
 .hero-button:hover {
-    background-color: #e0a800;
+    background-color: #196a9c;
 }
 
 .modal {
@@ -377,3 +377,34 @@ footer {
 h1, h2, h3, p {
     margin: 0;
 }
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+i {
+    font-size: 30px;
+    color: #000; /* Cor preta */
+    margin: 10px;
+  }
+  

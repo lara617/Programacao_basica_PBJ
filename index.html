@@ -50,7 +50,7 @@
                 <p>O que é a programação</p>
             </div>
             <div class="card" onclick="openModal('algoritmos')">
-                <img src="https://via.placeholder.com/150" alt="Card Image">
+                <img src="/img/Algoritmos.png" alt="Card Image">
                 <h3>Algoritmos</h3>
                 <p>O que são algoritmos</p>
             </div>
@@ -74,7 +74,28 @@
 
     <div id="team" class="section">
         <h1>Team</h1>
-        <p>Conheça nossa equipe.</p>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="img/lara.jpg" alt="Membro 1" class="team-photo">
+                <h3>Lara Pires</h3>
+                <a href="https://github.com/lara617" target="_blank"><br>
+                    <img src="img/github_icon.png" alt="GitHub" class="icon"> Lara 617
+                </a><br><br>
+                <a href="https://www.linkedin.com/in/lara-pires-096062336/" target="_blank">
+                    <img src="img/linkedin_icon.png" alt="LinkedIn" class="icon"> Lara Pires
+                </a>
+            </div>
+            <div class="team-member">
+                <img src="img/gui.jpg" alt="Membro 2" class="team-photo">
+                <h3>Guilherme Mesquita</h3>
+                <a href="https://github.com/Guimesquita15" target="_blank"><br>
+                    <img src="img/github_icon.png" alt="GitHub" class="icon"> Guimesquita15
+                </a><br><br>
+                <a href="https://linkedin.com/in/usuario2" target="_blank">
+                    <img src="img/linkedin_icon.png" alt="LinkedIn" class="icon"> usuario2
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- Modal -->
@@ -463,27 +484,40 @@
 
 
                 <h2>O que é o Código Binário?</h2>
+                <div class="content-with-image">
+                    <div class="text-content">
                 <p>
-                    Código binário é o idioma nativo dos computadores.  
-                    Ele é formado por uma sequência de dois números: 0 e 1.  
-                    Cada número ou combinação deles representa algo que o computador deve fazer.  
-                    É como se os 0s e 1s fossem um "interruptor", onde 0 significa "desligado" e 1 "ligado".  
-                    Por trás de cada aplicativo, site ou jogo que você usa, há muito código binário funcionando!
-                </p>
+                    Código binário é o idioma nativo dos computadores.  </p>
+                <p> Ele é formado por uma sequência de dois números: 0 e 1.  </p> 
+                <p> Cada número ou combinação deles representa algo que o computador deve fazer.  </p>
+                <p> É como se os 0s e 1s fossem um "interruptor", onde 0 significa "desligado" e 1 "ligado".  </p>
+                <p> Por trás de cada aplicação, site ou jogo que usas, há muito código binário a funcionar!
+                </p></div>
+                <div class="image-side">
+                    <img src="img/binario.png" alt="binario">
+                </div></div>
+                <br><br><br>
                 <h2>Quais são as Linguagens de Programação mais usadas e para que servem?</h2>
                 <ul>
                     <li><strong>Python:</strong> Muito usado para criar sites, jogos e até inteligência artificial!</li>
-                    <li><strong>JavaScript:</strong> Faz sites ficarem interativos, como botões que clicamos e jogos na web.</li>
-                    <li><strong>Java:</strong> Ideal para aplicativos grandes, como o do banco ou até o Minecraft.</li>
+                    <img src="img/py.png" width="600"><br><br><br>
+                    <li><strong>JavaScript:</strong> Faz com que os sites fiquem interativos, como botões que clicamos e jogos na web.</li>
+                    <img src="img/js.png" width="600"><br><br><br>
+                    <li><strong>Java:</strong> Ideal para aplicações grandes, como o banco ou até o Minecraft.</li>
+                    <img src="img/java.png" width="600"><br><br><br>
                     <li><strong>C++:</strong> Usado para criar jogos e sistemas que precisam ser rápidos, como os de controle de robôs.</li>
+                    <img src="img/cpp.png" width="600"><br><br><br>
+                    <li><strong>HTML e CSS:</strong> Não são exatamente linguagens de programação, mas são muito importantes para criar sites. O HTML constrói a estrutura, e o CSS deixa tudo bonito. </li>
+                    <img src="img/html.png" width="600"><br><br><br>
                     <li><strong>Scratch:</strong> Uma linguagem feita especialmente para crianças começarem a programar!</li>
+                    <img src="img/scratch.png" width="600"><br><br><br>
                 </ul>
                 <h2>Resumo Divertido</h2>
-                    <p>Imagine que programar é como ensinar uma dança para um robô.  
-                    Você escreve cada passo da dança (em uma linguagem de programação) e o robô aprende a dançar.  
-                    No início, o robô não entende nada além de "pise no 0" ou "pule no 1" (código binário).  
-                    Mas com as linguagens, você pode dizer coisas como "Gire para a direita" ou "Faça um salto"  
-                    e ele entende rapidinho! No final, o robô pode fazer uma coreografia completa só com o seu código!
+                    <p>Imagina que programar é como ensinar uma dança para um robô.  </p>
+                    <p>Escreves cada passo da dança (em uma linguagem de programação) e o robô aprende a dançar.</p>  
+                    <p>No início, o robô não entende nada além de "pisa no 0" ou "salta no 1" (código binário).</p>  
+                    <p>Mas com as linguagens, você pode dizer coisas como "Gira para a direita" ou "Anda para a frente"  
+                    e ele vai entender rapidamente! No final, o robô pode fazer uma coreografia completa só com o teu código!</p>
                 </div>
             </div>
         </div>
@@ -493,10 +527,66 @@
         <div id="modalContent-algoritmos" style="display: none;">
             <h1>Algoritmos</h1>
            <div class="modal-image-container">
-                <img src="img/programação.png" alt="Algoritmos" id="modalImage">
+                <img src="img/Algoritmos.png" alt="Algoritmos" id="modalImage">
               </div>
                   <div class="modal-text">
-                    jsdhsjhsd
+
+                    <h1>O que é um Algoritmo?</h1>
+                    <p>Um algoritmo é uma sequência de passos organizados que ajuda a resolver um problema ou realizar uma tarefa específica.</p>
+                    <p>É como fazer um sumo de laranja! Tens de seguir as etapas certas para que o sumo fique perfeito.</p>
+                <div class="content-with-image">
+                    <div class="text-content">
+                    <h3>Exemplo:</h3>
+                    <ul><br>
+                        <li>Pega em algumas laranjas.</li>
+                        <li>Corta as laranjas ao meio.</li>
+                        <li>Espreme o sumo das laranjas.</li>
+                        <li>Coloca o sumo num copo.</li>
+                        <li>Beber o sumo e aproveitar!</li>
+                    </ul></div>
+                    <div class="image-side">
+                        <img src="img/sumo.png" alt="sumo">
+                    </div></div>
+                    <p>Os computadores funcionam de forma semelhante: seguem instruções bem definidas (os algoritmos) para chegar ao resultado esperado.</p>
+                <br><br>
+                    <h2>Onde os Algoritmos São Usados?</h2>
+                    <div class="content-with-image">
+                        <div class="text-content"><ul>
+                        <li><strong>Jogos:</strong> Para decidir como os personagens se comportam.</li>
+                        <li><strong>Aplicações de Streaming:</strong> Para recomendar filmes ou músicas que gostas.</li>
+                        <li><strong>GPS e Mapas:</strong> Para encontrar o caminho mais rápido.</li>
+                        <li><strong>Supermercados Online:</strong> Para organizar os produtos que vês e sugerir promoções.</li>
+                        <li><strong>Educação:</strong> Em aplicações que ensinam matemática, programação ou línguas, criando exercícios personalizados.</li>
+                        <li><strong>Rotinas diárias:</strong> Até planear como estudar ou fazer uma viagem envolve criar um algoritmo na tua mente!</li>
+                    </ul></div>
+                    <div class="image-side">
+                        <img src="img/mapa.png" alt="mapa">
+                    </div></div>
+                <br><br>
+                    <h2>Tipos de Algoritmos</h2>
+                    <div class="content-with-image">
+                        <div class="text-content"><ul>
+                        <li><strong>Busca:</strong> Encontrar algo, como procurar uma palavra num dicionário.</li>
+                        <li><strong>Ordenação:</strong> Colocar as coisas em ordem, como organizar os teus livros por tamanho, cor ou escritor.</li>
+                        <li><strong>Cálculo:</strong> Resolver problemas matemáticos, como calcular quanto gastaste num mês.</li>
+                        <li><strong>Decisão:</strong> Analisar várias opções para escolher a melhor, como decidir o que comer ao almoço.</li>
+                    </ul></div>
+                    <div class="image-side">
+                        <img src="img/paint.png" alt="paint">
+                    </div></div>
+                <br><br><br>
+                    <h2>Como Funciona um Algoritmo?</h2>
+                    <p>Os algoritmos funcionam em 3 etapas básicas:</p>
+                    <ul>
+                        <li><strong>Entrada:</strong> São os dados que forneces (ex.: as laranjas para o sumo).</li>
+                        <li><strong>Processamento:</strong> O que o algoritmo faz com esses dados (ex.: espremer as laranjas).</li>
+                        <li><strong>Saída:</strong> O resultado final (ex.: o sumo pronto no copo, que podes beber).</li>
+                    </ul>
+                
+                    <br><br><br>
+                        <h3>Resumo Divertido</h3>
+                        <p>Imagina que és um robot ajudante de cozinha e recebeste uma missão: fazer o sumo de laranja perfeito. O algoritmo é como o manual que explica passo a passo o que fazer: pegar nas laranjas, cortar, espremer, colocar no copo e, claro, beber! Se seguires o manual direitinho, vais ter um delicioso sumo. Se errares a ordem, podes acabar com laranjas espalhadas e sem sumo!</p>
+                    
             </div>
         </div>
 
