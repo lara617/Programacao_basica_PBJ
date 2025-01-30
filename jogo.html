@@ -12,42 +12,36 @@
         <h1 class="title">Vamos Programar!! 🚀</h1>
         
         <div class="button-container">
-            <button class="button button-1" data-tooltip="Clique para começar!">
+            <button class="button button-1" data-tooltip="Clique para começar!" aria-label="Jogar">
                 <span class="icon">🎮</span>
                 Jogar
             </button>
-            <button class="button button-quiz" data-tooltip="Teste seus conhecimentos!">
+            <button class="button button-quiz" data-tooltip="Teste seus conhecimentos!" id="openModalBtn" aria-label="Abrir Quiz">
                 <span class="icon">🎯</span>
                 Quiz
             </button>
-            <button class="button button-learn" data-tooltip="Aprenda mais sobre programação!">
+            <button class="button button-learn" data-tooltip="Aprenda mais sobre programação!" aria-label="Aprender">
                 <span class="icon">📚</span>
                 Aprender
             </button>
-            <button class="button button-4" data-tooltip="Precisa de ajuda?">
-                <span class="icon">❓</span>
-                Ajuda
-            </button>
         </div>
     </div>
-   <!-- Modal oculto inicialmente -->
-<!-- Modal oculto inicialmente -->
-<!-- Modal oculto inicialmente -->
-<div id="modal" style="display:none;">
-    <span class="close-button">&times;</span>
-    <div id="modal-title">Título do Modal</div>
-    <div id="modal-text">
-         <button class="button" onclick="startQuiz('Componentes')">Quiz sobre Componentes</button>
-        <button class="button" onclick="startQuiz('Computador')">Quiz sobre Computador</button>
-        <button class="button" onclick="startQuiz('Programação')">Quiz sobre Programação</button>
-        <button class="button" onclick="startQuiz('Algoritmos')">Quiz sobre Algoritmos</button>
-        <button class="button" onclick="startQuiz('Funções')">Quiz sobre Funções</button>
-        <button class="button" onclick="startQuiz('POO')">Quiz sobre POO</button>
+
+    <div id="modal" style="display:none;" role="dialog" aria-labelledby="modal-title">
+        <span class="close-button" id="closeModalBtn" aria-label="Fechar">&times;</span>
+        <div id="modal-title">Escolha seu Quiz</div>
+        <div id="modal-text">
+            <button class="button quiz-select" id="quiz-componentes">Quiz sobre Componentes</button>
+            <button class="button quiz-select" id="quiz-computador">Quiz sobre Computador</button>
+            <button class="button quiz-select" id="quiz-programacao">Quiz sobre Programação</button>
+            <button class="button quiz-select" id="quiz-algoritmos">Quiz sobre Algoritmos</button>
+            <button class="button quiz-select" id="quiz-funcoes">Quiz sobre Funções</button>
+            <button class="button quiz-select" id="quiz-poo">Quiz sobre POO</button>
+        </div>
     </div>
-</div>
 
+    <button id="next-button" class="next-button" style="display: none;" aria-label="Próxima Pergunta">Próxima Pergunta</button>
 
-
-    <script src="script2.js" defer></script>
+    <script src="script2.js"></script>
 </body>
 </html>
