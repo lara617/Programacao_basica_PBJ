@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("loading-button");
     
     button.addEventListener("click", () => {
+        // Adiciona a classe para manter a cor azul
+        button.classList.add('button-active');
+
         // Scroll suave para a seção de aprendizagem usando scrollIntoView
         document.getElementById('aprendizagem').scrollIntoView({
             behavior: 'smooth',
@@ -22,15 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Efeito de loading
         button.textContent = "Carregando...";
-        button.disabled = true;
-        button.style.backgroundColor = "#d4d4d4";
-        button.style.color = "#888";
+        button.disabled = true; // Desabilita o botão para evitar múltiplos cliques
 
         setTimeout(() => {
-            button.textContent = "Saber mais";
-            button.disabled = false;
-            button.style.backgroundColor = "#ffc107";
-            button.style.color = "#000";
+            button.disabled = false; // Reabilita o botão após 3 segundos
+            button.textContent = "Saber mais"; // Redefine o texto do botão
         }, 3000);
     });
 
@@ -93,3 +92,9 @@ function openModal(contentId) {
         window.scrollTo(0, parseInt(scrollY));
     }
 }
+
+document.querySelectorAll('.hero-button').forEach(button => {
+    button.addEventListener('click', function() {
+        this.classList.add('button-active');
+    });
+});
