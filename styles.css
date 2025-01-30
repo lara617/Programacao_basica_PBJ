@@ -402,27 +402,9 @@ h1, h2, h3, p {
     vertical-align: middle;
 }
 
-  i {
-    font-size: 25px;
-    margin: 5px;
-    transition: 0.3s;
+i {
+    font-size: 30px;
+    color: #000; /* Cor preta */
+    margin: 10px;
   }
-  i:hover {
-    color: #0077b5; /* Azul do LinkedIn */
-  }
-  
-.button-active {
-    background-color: #196a9c; /* Cor azul que você escolheu */
-    color: #fff; /* Cor do texto */
-}
-
-@keyframes subirDescer {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); } /* Aumentado para 10px */
-    100% { transform: translateY(0); }
-}
-.efeito-movimento {
-    animation: subirDescer 2s ease-in-out infinite;
-    font-family:Georgia, 'Times New Roman', Times, serif; /* Alterado para Verdana */
-}
   

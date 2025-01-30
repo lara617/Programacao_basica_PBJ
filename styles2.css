@@ -100,11 +100,13 @@ body {
 .modal {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 .modal-content {
@@ -119,14 +121,10 @@ body {
 }
 
 .close-button {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 30px;
     cursor: pointer;
-    transition: color 0.3s;
+    font-size: 20px;
+    float: right;
 }
-
 .close-button:hover {
     color: #e53935;
 }
@@ -420,15 +418,15 @@ h3 {
 }
 
 .option-button.correct {
-    background: #2ecc71;
+    background-color: #4CAF50;
     color: white;
-    border-color: #27ae60;
+    transition: background-color 0.3s ease;
 }
 
 .option-button.wrong {
-    background: #e74c3c;
+    background-color: #f44336;
     color: white;
-    border-color: #c0392b;
+    transition: background-color 0.3s ease;
 }
 
 .quiz-button {
