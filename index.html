@@ -10,10 +10,11 @@
     <div id="home" class="section">
         <div class="hero-section">
             <div class="hero-content">
-                <h2>Programação Básica para Jovens</h2>
-                <h1>Bem vindo à PBJ</h1>
+                    <h2 class="efeito-movimento">Programação Básica para Jovens</h2>
+                    <h1 class="efeito-movimento">Bem vindo à PBJ</h1>
+                
                 <button class="hero-button" id="loading-button">Saber mais</button>
-            </div>
+            </div></div>
         </div>
     </div>
 
@@ -55,23 +56,23 @@
                 <p>O que são algoritmos</p>
             </div>
             <div class="card" onclick="openModal('funções')">
-                <img src="https://via.placeholder.com/150" alt="Card Image">
-                <h3>Funções</h3>
+                <img src="img/condicional.jpg" alt="Card Image">
+                <h3>Funções e Condições</h3>
                 <p>O que são funções</p>
                 <p>O que são condições (If/Else)</p>
             </div>
             <div class="card" onclick="openModal('prog obj')">
-                <img src="https://via.placeholder.com/150" alt="Card Image">
+                <img src="/img/programação-orientada-a-objetos.jpeg" alt="Card Image">
                 <h3>Programação Orientada a Objetos</h3>
                 <p>O que é programação orientada a objetos</p>
             </div>
         </div>
     </div>
-
+<center>
     <div id="quizz" class="section">
         <h1>Quizz</h1>
-        <button class="hero-button" onclick="window.location.href='jogo.html'">Ir para o Jogo</button>    </div>
-
+        <button class="hero-button" onclick="window.location.href='jogo.html'">Testa os teus conhecimentos</button>    </div>
+</center>
     <div id="team" class="section">
         <h1>Team</h1>
         <div class="team-container">
@@ -91,8 +92,8 @@
                 <a href="https://github.com/Guimesquita15" target="_blank"><br>
                     <img src="img/github_icon.png" alt="GitHub" class="icon"> Guimesquita15
                 </a><br><br>
-                <a href="https://linkedin.com/in/usuario2" target="_blank">
-                    <img src="img/linkedin_icon.png" alt="LinkedIn" class="icon"> usuario2
+                <a href="https://www.linkedin.com/in/guilherme-mesquita-4127a52b2/" target="_blank">
+                    <img src="img/linkedin_icon.png" alt="LinkedIn" class="icon"> Guilherme Mesquita
                 </a>
             </div>
         </div>
@@ -592,12 +593,48 @@
 
             <!-- Modal Funções -->
             <div id="modalContent-funções" style="display: none;">
-                <h1>Funções</h1>
+                <h1>Funções e Condições</h1>
                <div class="modal-image-container">
-                    <img src="img/programação.png" alt="Funções" id="modalImage">
+                    <img src="img/condicional.jpg" alt="Funções" id="modalImage">
                   </div>
                       <div class="modal-text">
-                        njdndjsf
+    
+                        <div class="content-with-image">
+                            <div class="text-content">
+    <h2>O que são Funções?</h2>
+    <p>As funções são blocos de código que realizam uma tarefa específica. Elas permitem reutilizar código, tornando os programas mais organizados e eficientes.</p>
+ </div>
+<div class="image-side">
+    <img src="img/função.png" alt="Função">
+</div></div>   
+<br>
+    <h2>Onde são usadas?</h2>
+    <p>Funções são usadas em praticamente todas as linguagens de programação para automatizar processos, como calcular valores, manipular dados ou exibir informações.</p>
+<br><br>
+    <div class="content-with-image">
+        <div class="text-content">   
+    <h2>O que são Condições (If/Else)?</h2>
+    <p>As condições são instruções que permitem que um programa tome decisões. O computador verifica se uma condição é verdadeira ou falsa e escolhe o caminho apropriado.</p>
+    </div>
+<div class="image-side">
+    <img src="img/ifelse.png" alt="If/Else">
+</div></div>  
+<br>
+    <h2>Onde são usadas?</h2>
+    <p>As condições são usadas em jogos para verificar se um jogador ganhou, em sites para validar senhas e em milhares de outras aplicações do dia a dia.</p>
+<br><br>
+<h2>Resumo Divertido</h2>
+<p>Imagina que és um <strong>chefe de cozinha</strong> num restaurante!</p>
+<br>
+    <p><strong>1- Escolher a receita</strong> → O chefe decide fazer uma pizza deliciosa. </p>
+    <p><strong>2- Verificar ingredientes</strong> → <em>Se</em> houver farinha e queijo, ele continua. <em>Se não houver</em>, vai ao supermercado.</p>
+    <p><strong>3- Executar a função "fazer pizza"</strong> → Ele prepara a massa, adiciona molho e queijo e leva ao forno. </p>
+    <p><strong>4- Tomar uma decisão</strong> → <em>Se</em> a pizza estiver dourada, ele tira do forno. <em>Se não estiver</em>, espera mais um pouco.</p>
+    <p><strong>5- Servir a pizza</strong> → Ele coloca num prato e entrega ao cliente! </p>
+    <br>
+
+    <p>➡️ <strong>Os computadores funcionam assim!</strong> Eles usam <strong>funções</strong> para realizar tarefas e <strong>condições</strong> para decidir o que fazer a seguir. </p>
+
         </div>
     </div>
 
@@ -605,10 +642,62 @@
         <div id="modalContent-prog obj" style="display: none;">
             <h1>Programação Orientada a Objetos</Object></h1>
            <div class="modal-image-container">
-                <img src="img/programação.png" alt="Prog Obj" id="modalImage">
+                <img src="img/programação-orientada-a-objetos.jpeg" alt="Prog Obj" id="modalImage">
               </div>
                   <div class="modal-text">
-                    mn jknuij
+
+                    <h1>O que é Programação Orientada a Objetos?</h1>
+    <p>
+        A Programação Orientada a Objetos (POO) é uma forma de organizar um programa em "blocos" que têm <strong>características</strong> e <strong>ações</strong>.
+    </p>
+    <p>
+        Pensa em <strong>personagens</strong> de um jogo ou <strong>brinquedos</strong>. Cada personagem ou brinquedo tem as suas próprias características (como cor, tamanho, forma) e coisas que ele pode fazer (como correr, pular, falar).
+    </p>
+    <div class="content-with-image">
+        <div class="text-content"> 
+    <h2>Exemplo:</h2>
+    <ul>
+        <li><strong>Um carro</strong>:
+            <ul>
+                <li><strong>Características</strong>: cor (vermelho), modelo (esportivo)</li>
+                <li><strong>Ações</strong>: andar, parar</li>
+            </ul></div>
+    <div class="image-side">
+        <img src="img/poo.png" alt="POO">
+    </div></div>  
+        
+    <div class="content-with-image">
+        <div class="text-content"> 
+       <ul> <li><strong>Um cachorro</strong>:
+            <ul>
+                <li><strong>Características</strong>: cor (castanho), raça (labrador)</li>
+                <li><strong>Ações</strong>: correr, latir</li>
+    </ul></div>
+    <div class="image-side">
+        <img src="img/pooa.jpg" alt="POO2">
+    </div></div>
+<br><br>
+    <h2>Onde a Programação Orientada a Objetos é Usada?</h2>
+    <p>POO é usada em várias coisas que tu já conheces! Por exemplo:</p>
+    <ul>
+        <li><strong>Jogos</strong>: Cada personagem no jogo é como um objeto com as suas próprias características e ações.</li>
+        <li><strong>Aplicativos</strong>: No aplicativo de música, cada música tem características (nome, cantor) e ações (tocar, pausar).</li>
+        <li><strong>Sites</strong>: Em uma loja online, cada produto é um "objeto" com características (nome, preço) e ações (adicionar ao carrinho, comprar).</li>
+    </ul>
+<br><br><br>
+    <h2>Como Funciona a Programação Orientada a Objetos?</h2>
+    <p>
+        Quando programamos com POO, criamos <strong>modelos</strong> para os objetos. Esses modelos são chamados de <strong>classes</strong>. A <strong>classe</strong> define o que o objeto vai ter (características) e o que ele pode fazer (ações).
+    </p>
+    <p>
+        Depois, usamos essas classes para criar os objetos reais. Assim como, em vez de criar um carro do zero cada vez, tu crias um modelo de carro e, sempre que precisares, fazes um novo carro a partir desse modelo.
+    </p>
+<br><br><br>
+
+    <h2>Resumo Divertido</h2>
+    <p>
+        Imagina que tens uma fábrica de brinquedos. Tens <strong>modelos</strong> de brinquedos (como carros ou cachorros). Cada modelo tem as suas características (como cor) e ações (como andar ou latir). Quando queres um brinquedo novo, basta usar o modelo e criar ele! Programação Orientada a Objetos é isso: criar "modelos" e fazer brinquedos (ou objetos) com eles! 
+    </p>
             </div>
         </div>
 
